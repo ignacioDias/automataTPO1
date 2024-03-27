@@ -1,0 +1,13 @@
+/snap/clion/265/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/265/bin/ninja/linux/x64/ninja -G Ninja -S /home/ignaciodias/Desktop/Uni/Automatas/tpOb1 -B /home/ignaciodias/Desktop/Uni/Automatas/tpOb1/cmake-build-debug
+-- Configuring done (0.0s)
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    TP/5Tuple.cpp
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: tpOb1
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

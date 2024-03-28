@@ -1,3 +1,0 @@
-/home/ignaciodias/Desktop/Uni/Automatas/tpOb1/cmake-build-debug/CMakeFiles/tpOb1.dir
-/home/ignaciodias/Desktop/Uni/Automatas/tpOb1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ignaciodias/Desktop/Uni/Automatas/tpOb1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

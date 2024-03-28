@@ -8,27 +8,6 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- The C compiler identification is GNU 11.4.0
--- The CXX compiler identification is GNU 11.4.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done (0.4s)
-CMake Error at CMakeLists.txt:6 (add_executable):
-  Cannot find source file:
-
-    TP/5Tuple.cpp
-
-
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: tpOb1
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug

@@ -82,13 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp">
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp">
 			<Option target="tpOb1"/>
 		</Unit>
-		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp">
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/AutomataInterface.h">
 			<Option target="tpOb1"/>
 		</Unit>
-		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp">
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.h">
 			<Option target="tpOb1"/>
 		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/CMakeLists.txt">

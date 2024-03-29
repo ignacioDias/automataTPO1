@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp" "CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o.d"
-  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp" "CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o.d"
-  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp" "CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o.d"
+  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp" "CMakeFiles/tpOb1.dir/TP/Main.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/Main.cpp.o.d"
+  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp" "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o.d"
+  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp" "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o.d"
+  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp" "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o.d"
+  "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp" "CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

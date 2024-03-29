@@ -129,77 +129,125 @@ tpOb1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/build
 .PHONY : tpOb1/fast
 
-TP/DFA/AutomataInterface.o: TP/DFA/AutomataInterface.cpp.o
-.PHONY : TP/DFA/AutomataInterface.o
+TP/Main.o: TP/Main.cpp.o
+.PHONY : TP/Main.o
 
 # target to build an object file
-TP/DFA/AutomataInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o
-.PHONY : TP/DFA/AutomataInterface.cpp.o
+TP/Main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.o
+.PHONY : TP/Main.cpp.o
 
-TP/DFA/AutomataInterface.i: TP/DFA/AutomataInterface.cpp.i
-.PHONY : TP/DFA/AutomataInterface.i
+TP/Main.i: TP/Main.cpp.i
+.PHONY : TP/Main.i
 
 # target to preprocess a source file
-TP/DFA/AutomataInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.i
-.PHONY : TP/DFA/AutomataInterface.cpp.i
+TP/Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.i
+.PHONY : TP/Main.cpp.i
 
-TP/DFA/AutomataInterface.s: TP/DFA/AutomataInterface.cpp.s
-.PHONY : TP/DFA/AutomataInterface.s
+TP/Main.s: TP/Main.cpp.s
+.PHONY : TP/Main.s
 
 # target to generate assembly for a file
-TP/DFA/AutomataInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.s
-.PHONY : TP/DFA/AutomataInterface.cpp.s
+TP/Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.s
+.PHONY : TP/Main.cpp.s
 
-TP/DFA/DeterministicFiniteAutomata.o: TP/DFA/DeterministicFiniteAutomata.cpp.o
-.PHONY : TP/DFA/DeterministicFiniteAutomata.o
+TP/automata/dfa/DeterministicFiniteAutomata.o: TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.o
 
 # target to build an object file
-TP/DFA/DeterministicFiniteAutomata.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o
-.PHONY : TP/DFA/DeterministicFiniteAutomata.cpp.o
+TP/automata/dfa/DeterministicFiniteAutomata.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
 
-TP/DFA/DeterministicFiniteAutomata.i: TP/DFA/DeterministicFiniteAutomata.cpp.i
-.PHONY : TP/DFA/DeterministicFiniteAutomata.i
+TP/automata/dfa/DeterministicFiniteAutomata.i: TP/automata/dfa/DeterministicFiniteAutomata.cpp.i
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.i
 
 # target to preprocess a source file
-TP/DFA/DeterministicFiniteAutomata.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.i
-.PHONY : TP/DFA/DeterministicFiniteAutomata.cpp.i
+TP/automata/dfa/DeterministicFiniteAutomata.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.i
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.cpp.i
 
-TP/DFA/DeterministicFiniteAutomata.s: TP/DFA/DeterministicFiniteAutomata.cpp.s
-.PHONY : TP/DFA/DeterministicFiniteAutomata.s
+TP/automata/dfa/DeterministicFiniteAutomata.s: TP/automata/dfa/DeterministicFiniteAutomata.cpp.s
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.s
 
 # target to generate assembly for a file
-TP/DFA/DeterministicFiniteAutomata.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.s
-.PHONY : TP/DFA/DeterministicFiniteAutomata.cpp.s
+TP/automata/dfa/DeterministicFiniteAutomata.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.s
+.PHONY : TP/automata/dfa/DeterministicFiniteAutomata.cpp.s
 
-TP/DFA/NotDeterministicFiniteAutomata.o: TP/DFA/NotDeterministicFiniteAutomata.cpp.o
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.o
+TP/automata/ndfa/NotDeterministicFiniteAutomata.o: TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.o
 
 # target to build an object file
-TP/DFA/NotDeterministicFiniteAutomata.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.cpp.o
+TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o
 
-TP/DFA/NotDeterministicFiniteAutomata.i: TP/DFA/NotDeterministicFiniteAutomata.cpp.i
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.i
+TP/automata/ndfa/NotDeterministicFiniteAutomata.i: TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.i
 
 # target to preprocess a source file
-TP/DFA/NotDeterministicFiniteAutomata.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.i
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.cpp.i
+TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i
 
-TP/DFA/NotDeterministicFiniteAutomata.s: TP/DFA/NotDeterministicFiniteAutomata.cpp.s
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.s
+TP/automata/ndfa/NotDeterministicFiniteAutomata.s: TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.s
 
 # target to generate assembly for a file
-TP/DFA/NotDeterministicFiniteAutomata.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.s
-.PHONY : TP/DFA/NotDeterministicFiniteAutomata.cpp.s
+TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
+.PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
+
+TP/auxiliarmethods/CollectionsOperators.o: TP/auxiliarmethods/CollectionsOperators.cpp.o
+.PHONY : TP/auxiliarmethods/CollectionsOperators.o
+
+# target to build an object file
+TP/auxiliarmethods/CollectionsOperators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o
+.PHONY : TP/auxiliarmethods/CollectionsOperators.cpp.o
+
+TP/auxiliarmethods/CollectionsOperators.i: TP/auxiliarmethods/CollectionsOperators.cpp.i
+.PHONY : TP/auxiliarmethods/CollectionsOperators.i
+
+# target to preprocess a source file
+TP/auxiliarmethods/CollectionsOperators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.i
+.PHONY : TP/auxiliarmethods/CollectionsOperators.cpp.i
+
+TP/auxiliarmethods/CollectionsOperators.s: TP/auxiliarmethods/CollectionsOperators.cpp.s
+.PHONY : TP/auxiliarmethods/CollectionsOperators.s
+
+# target to generate assembly for a file
+TP/auxiliarmethods/CollectionsOperators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s
+.PHONY : TP/auxiliarmethods/CollectionsOperators.cpp.s
+
+TP/parser/Parser.o: TP/parser/Parser.cpp.o
+.PHONY : TP/parser/Parser.o
+
+# target to build an object file
+TP/parser/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o
+.PHONY : TP/parser/Parser.cpp.o
+
+TP/parser/Parser.i: TP/parser/Parser.cpp.i
+.PHONY : TP/parser/Parser.i
+
+# target to preprocess a source file
+TP/parser/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.i
+.PHONY : TP/parser/Parser.cpp.i
+
+TP/parser/Parser.s: TP/parser/Parser.cpp.s
+.PHONY : TP/parser/Parser.s
+
+# target to generate assembly for a file
+TP/parser/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s
+.PHONY : TP/parser/Parser.cpp.s
 
 # Help Target
 help:
@@ -210,15 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tpOb1"
-	@echo "... TP/DFA/AutomataInterface.o"
-	@echo "... TP/DFA/AutomataInterface.i"
-	@echo "... TP/DFA/AutomataInterface.s"
-	@echo "... TP/DFA/DeterministicFiniteAutomata.o"
-	@echo "... TP/DFA/DeterministicFiniteAutomata.i"
-	@echo "... TP/DFA/DeterministicFiniteAutomata.s"
-	@echo "... TP/DFA/NotDeterministicFiniteAutomata.o"
-	@echo "... TP/DFA/NotDeterministicFiniteAutomata.i"
-	@echo "... TP/DFA/NotDeterministicFiniteAutomata.s"
+	@echo "... TP/Main.o"
+	@echo "... TP/Main.i"
+	@echo "... TP/Main.s"
+	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.o"
+	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.i"
+	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.s"
+	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.o"
+	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.i"
+	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.s"
+	@echo "... TP/auxiliarmethods/CollectionsOperators.o"
+	@echo "... TP/auxiliarmethods/CollectionsOperators.i"
+	@echo "... TP/auxiliarmethods/CollectionsOperators.s"
+	@echo "... TP/parser/Parser.o"
+	@echo "... TP/parser/Parser.i"
+	@echo "... TP/parser/Parser.s"
 .PHONY : help
 
 

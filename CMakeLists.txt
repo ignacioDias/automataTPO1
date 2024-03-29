@@ -4,6 +4,13 @@ project(tpOb1)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(tpOb1
-        TP/DFA/AutomataInterface.cpp
-        TP/DFA/NotDeterministicFiniteAutomata.cpp
-        TP/DFA/DeterministicFiniteAutomata.cpp)
+        TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp
+        TP/automata/dfa/DeterministicFiniteAutomata.cpp
+        TP/automata/AutomataInterface.h
+        TP/automata/dfa/DeterministicFiniteAutomata.h
+        TP/automata/ndfa/NotDeterministicFiniteAutomata.h
+        TP/auxiliarmethods/CollectionsOperators.h
+        TP/auxiliarmethods/CollectionsOperators.cpp
+        TP/Main.cpp
+        TP/parser/Parser.h
+        TP/parser/Parser.cpp)

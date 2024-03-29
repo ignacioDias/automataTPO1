@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o -o tpOb1 
+/usr/bin/c++ -g CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o CMakeFiles/tpOb1.dir/TP/Main.cpp.o CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o -o tpOb1 

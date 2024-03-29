@@ -69,63 +69,95 @@ include CMakeFiles/tpOb1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tpOb1.dir/flags.make
 
-CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o: CMakeFiles/tpOb1.dir/flags.make
-CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp
-CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o -MF CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp
+CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp
+CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o -MF CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp
 
-CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp > CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.i
+CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp > CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.i
 
-CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/AutomataInterface.cpp -o CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.s
+CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp -o CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
 
-CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/flags.make
-CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp
-CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o -MF CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp
+CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp
+CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o -MF CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp
 
-CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp > CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.i
+CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp > CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.i
 
-CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/NotDeterministicFiniteAutomata.cpp -o CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.s
+CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp -o CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.s
 
-CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/flags.make
-CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp
-CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o -MF CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp
+CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp
+CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o -MF CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp
 
-CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp > CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.i
+CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp > CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.i
 
-CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/DFA/DeterministicFiniteAutomata.cpp -o CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.s
+CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp -o CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/Main.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/Main.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp
+CMakeFiles/tpOb1.dir/TP/Main.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tpOb1.dir/TP/Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/Main.cpp.o -MF CMakeFiles/tpOb1.dir/TP/Main.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/Main.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp
+
+CMakeFiles/tpOb1.dir/TP/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/Main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp > CMakeFiles/tpOb1.dir/TP/Main.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/Main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/Main.cpp -o CMakeFiles/tpOb1.dir/TP/Main.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp
+CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o -MF CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o -c /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp
+
+CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp > CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.cpp -o CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s
 
 # Object files for target tpOb1
 tpOb1_OBJECTS = \
-"CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o" \
-"CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o" \
-"CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o"
+"CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/Main.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o"
 
 # External object files for target tpOb1
 tpOb1_EXTERNAL_OBJECTS =
 
-tpOb1: CMakeFiles/tpOb1.dir/TP/DFA/AutomataInterface.cpp.o
-tpOb1: CMakeFiles/tpOb1.dir/TP/DFA/NotDeterministicFiniteAutomata.cpp.o
-tpOb1: CMakeFiles/tpOb1.dir/TP/DFA/DeterministicFiniteAutomata.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/Main.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/build.make
 tpOb1: CMakeFiles/tpOb1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable tpOb1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tpOb1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tpOb1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

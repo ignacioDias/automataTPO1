@@ -23,12 +23,13 @@ public:
     set<int> getE();
     int getInitialState();
     set<int> getF();
-    void addK(int state);
-    void addE(int state);
+    void addState(int state);
+    void addSymbolToAlphabet(int state);
     void setK(set<int> states);
     void setE(set<int> alphabet);
     void setInitialState(int q);
     void setF(set<int> final);
+    void addFinalState(int state);
     void addPath(int node, int arc, int destination);
     set<int> calculateDelta(pair<int,int> key);
     bool repOk();

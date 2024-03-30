@@ -32,11 +32,14 @@ void NotDeterministicFiniteAutomata :: setInitialState(int q) {
 void NotDeterministicFiniteAutomata :: setF(set<int> final) {
     this->F = final;
 }
-void NotDeterministicFiniteAutomata :: addK(int state) {
+void NotDeterministicFiniteAutomata :: addState(int state) {
     this->K.insert(state);
 }
-void NotDeterministicFiniteAutomata :: addE(int state) {
+void NotDeterministicFiniteAutomata :: addSymbolToAlphabet(int state) {
     this->E.insert(state);
+}
+void NotDeterministicFiniteAutomata ::addFinalState(int state) {
+    this->F.insert(state);
 }
 void NotDeterministicFiniteAutomata :: addPath(int node, int arc, int destination) { //TODO: CHECKEAR QUE NODE Y ARC SEAN VÁLIDOS
     pair<int,int> path;

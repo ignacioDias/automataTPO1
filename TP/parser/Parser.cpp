@@ -24,60 +24,60 @@ Parser::Parser() {
 Parser::~Parser() {
 }
 
-bool Parser::validateFirstLine(std::string line){
+bool Parser::validateFirstLine(string line){
     return line == "digraph{"; 
 }
-bool Parser::validateLastLine(std::string line){
+bool Parser::validateLastLine(string line){
     return line == "}";
 }
 
-bool Parser::validateTransitionLine(std::string line){
-    std::regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
-    return std::regex_search(line, regex);
+bool Parser::validateTransitionLine(string line){
+    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
+    return regex_search(line, regex);
 }
 
-bool Parser::validateInitialStateLine(std::string line){
-    std::regex regex("inic\\[shape = point\\];inic-> \\d+;"); //ej: inic[shape = point];inic-> 000;
-    return std::regex_search(line, regex);
+bool Parser::validateInitialStateLine(string line){
+    regex regex("inic\\[shape = point\\];inic-> \\d+;"); //ej: inic[shape = point];inic-> 000;
+    return regex_search(line, regex);
 }
 
-bool Parser::validateFinalStateLine(std::string line){
-    std::regex regex("\\d+\\[shape = doublecircle\\];"); //ej: 111[shape = doublecircle];
-    return std::regex_search(line, regex);
+bool Parser::validateFinalStateLine(string line){
+    regex regex("\\d+\\[shape = doublecircle\\];"); //ej: 111[shape = doublecircle];
+    return regex_search(line, regex);
 }
 
-void Parser::addInitialStateFromInitialStateLine(std::string line){
-    std::regex regex("(\\d+)");
-    std::smatch match; 
-    std::regex_search(line, match, regex);
-    nda.setInitialState(std::stoi(match[1])); // stoi convierte string a int
+void Parser::addInitialStateFromInitialStateLine(string line){
+    regex regex("(\\d+)");
+    smatch match;
+    regex_search(line, match, regex);
+    nda.setInitialState(stoi(match[1])); // stoi convierte string a int
 }
 
-bool Parser:: isRankdirLine(std::string line){
+bool Parser:: isRankdirLine(string line){
     return line == "rankdir=LR;";
 }
         
-void Parser::addFinalStateFromFinalStateLine(std::string line){
-    std::regex regex("(\\d+)");
-    std::smatch match; 
-    std::regex_search(line, match, regex);
-    nda.addFinalState(std::stoi(match[1]));
+void Parser::addFinalStateFromFinalStateLine(string line){
+    regex regex("(\\d+)");
+    smatch match;
+    regex_search(line, match, regex);
+    nda.addFinalState(stoi(match[1]));
 }
 
-void Parser::addAutomataInformationFromTransitionLine(std::string line){
+void Parser::addAutomataInformationFromTransitionLine(string line){
     int const LAMBDA = -1; 
-    std::regex regex("(\\d+) -> (\\d+) \\[label = (\\d+|_)\\]"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
-    std::smatch match; 
-    std::regex_search(line, match, regex);
+    regex regex("(\\d+) -> (\\d+) \\[label = (\\d+|_)\\]"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
+    smatch match;
+    regex_search(line, match, regex);
     string symbol = match[3];
-    int stateFrom = std::stoi(match[1]);
-    int stateTo = std::stoi(match[2]);
+    int stateFrom = stoi(match[1]);
+    int stateTo = stoi(match[2]);
 
     if (symbol == "_"){
         nda.addPath(stateFrom, LAMBDA, stateTo);
     } else {
-        nda.addPath(stateFrom, std::stoi(symbol), stateTo);
-        nda.addSymbolToAlphabet(std::stoi(symbol));
+        nda.addPath(stateFrom, stoi(symbol), stateTo);
+        nda.addSymbolToAlphabet(stoi(symbol));
     }
     nda.addState(stateFrom);
     nda.addState(stateTo);

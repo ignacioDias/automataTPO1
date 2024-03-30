@@ -11,16 +11,18 @@ public:
     Parser();
         ~Parser();
 
-        bool validateFirstLine(std::string line);
-        bool validateLastLine(std::string line);
-        bool validateTransitionLine(std::string line);
-        bool validateInitialStateLine(std::string line);
-        bool validateFinalStateLine(std::string line);
-        bool isRankdirLine(std::string line);
+        bool validateFirstLine(string line);
+        bool validateLastLine(string line);
+        bool validateTransitionLine(string line);
+        bool validateInitialStateLine(string line);
+        bool validateFinalStateLine(string line);
+        bool isRankdirLine(string line);
 
-        void addInitialStateFromInitialStateLine(std::string line);
-        void addFinalStateFromFinalStateLine(std::string line);
-        void addAutomataInformationFromTransitionLine(std::string line);
+        void addInitialStateFromInitialStateLine(string line);
+        void addFinalStateFromFinalStateLine(string line);
+        void addAutomataInformationFromTransitionLine(string line);
+        NotDeterministicFiniteAutomata getNDA();
+
 
 private:
     static bool checkDelta(const string& line);

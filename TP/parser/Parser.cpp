@@ -19,6 +19,7 @@ bool Parser :: checkDelta(const string& line) {
 
 Parser::Parser() {
     NotDeterministicFiniteAutomata nda; 
+    bool readLastLine = false;
 }
 
 Parser::~Parser() {
@@ -32,7 +33,7 @@ bool Parser::validateLastLine(string line){
 }
 
 bool Parser::validateTransitionLine(string line){
-    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
+    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)(,\\d+|_)*\\]"); //ej: 000 -> 111 [label = _]
     return regex_search(line, regex);
 }
 
@@ -56,7 +57,7 @@ void Parser::addInitialStateFromInitialStateLine(string line){
 bool Parser:: isRankdirLine(string line){
     return line == "rankdir=LR;";
 }
-        
+
 void Parser::addFinalStateFromFinalStateLine(string line){
     regex regex("(\\d+)");
     smatch match;
@@ -66,18 +67,21 @@ void Parser::addFinalStateFromFinalStateLine(string line){
 
 void Parser::addAutomataInformationFromTransitionLine(string line){
     int const LAMBDA = -1; 
-    regex regex("(\\d+) -> (\\d+) \\[label = (\\d+|_)\\]"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
+    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)(,\\d+|_)*\\]"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
     smatch match;
     regex_search(line, match, regex);
-    string symbol = match[3];
     int stateFrom = stoi(match[1]);
     int stateTo = stoi(match[2]);
 
-    if (symbol == "_"){
-        nda.addPath(stateFrom, LAMBDA, stateTo);
-    } else {
-        nda.addPath(stateFrom, stoi(symbol), stateTo);
-        nda.addSymbolToAlphabet(stoi(symbol));
+    for(int i = 3; i < match.size(); i++){
+        string symbol = match[i];
+        if (symbol == "_"){
+            nda.addSymbolToAlphabet(LAMBDA);
+            nda.addPath(stateFrom, LAMBDA, stateTo);
+        } else{
+            nda.addSymbolToAlphabet(stoi(symbol));
+            nda.addPath(stateFrom, stoi(symbol), stateTo);
+        }
     }
     nda.addState(stateFrom);
     nda.addState(stateTo);
@@ -85,4 +89,18 @@ void Parser::addAutomataInformationFromTransitionLine(string line){
 
 NotDeterministicFiniteAutomata Parser::getNDA(){
     return nda;
+}
+
+void Parser::fileManagement(string line){
+    if (validateTransitionLine(line)){
+        addAutomataInformationFromTransitionLine(line);
+    } else if (validateInitialStateLine(line)){
+        addInitialStateFromInitialStateLine(line);
+    } else if (validateFinalStateLine(line)){
+        addFinalStateFromFinalStateLine(line);
+        readLastLine = true; 
+    } else if(!isRankdirLine(line) || line == "}" && readLastLine){
+        cerr << "Formato invalido del archivo." << endl;
+        exit(-1);
+    }
 }

@@ -6,16 +6,16 @@ using namespace std;
 
 DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0(0), F() {
 }
-void DeterministicFiniteAutomata::setE(vector<int> alphabet) {
+void DeterministicFiniteAutomata::setE(set<int> alphabet) {
     this->E = alphabet;
 }
-void DeterministicFiniteAutomata :: setK(vector<int> states) {
+void DeterministicFiniteAutomata :: setK(set<int> states) {
     this->K = states;
 }
 void DeterministicFiniteAutomata :: setInitialState(int q) {
     this->q0 = q;
 }
-void DeterministicFiniteAutomata :: setF(vector<int> final) {
+void DeterministicFiniteAutomata :: setF(set<int> final) {
     this->F = final;
 }
 int DeterministicFiniteAutomata :: calculateDelta(pair<int,int> key) {

@@ -8,31 +8,37 @@ using namespace std;
 
 NotDeterministicFiniteAutomata :: NotDeterministicFiniteAutomata() : K(), E(), d(), q0(0), F() {
 }
-vector<int> NotDeterministicFiniteAutomata :: getK() {
+set<int> NotDeterministicFiniteAutomata :: getK() {
     return K;
 }
-vector<int> NotDeterministicFiniteAutomata :: getE() {
+set<int> NotDeterministicFiniteAutomata :: getE() {
     return E;
 }
 int NotDeterministicFiniteAutomata :: getInitialState() {
     return q0;
 }
-vector<int> NotDeterministicFiniteAutomata :: getF() {
+set<int> NotDeterministicFiniteAutomata :: getF() {
     return F;
 }
-void NotDeterministicFiniteAutomata :: setK(vector<int> states) {
+void NotDeterministicFiniteAutomata :: setK(set<int> states) {
     this->K = states;
 }
-void NotDeterministicFiniteAutomata :: setE(vector<int> alphabet) {
+void NotDeterministicFiniteAutomata :: setE(set<int> alphabet) {
     this->E = alphabet;
 }
 void NotDeterministicFiniteAutomata :: setInitialState(int q) {
     this->q0 = q;
 }
-void NotDeterministicFiniteAutomata :: setF(vector<int> final) {
+void NotDeterministicFiniteAutomata :: setF(set<int> final) {
     this->F = final;
 }
-void NotDeterministicFiniteAutomata :: addPath(int node, int arc, int destination) {
+void NotDeterministicFiniteAutomata :: addK(int state) {
+    this->K.insert(state);
+}
+void NotDeterministicFiniteAutomata :: addE(int state) {
+    this->E.insert(state);
+}
+void NotDeterministicFiniteAutomata :: addPath(int node, int arc, int destination) { //TODO: CHECKEAR QUE NODE Y ARC SEAN VÁLIDOS
     pair<int,int> path;
     path.first = node;
     path.second = arc;

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool CollectionsOperators :: contained(const vector<int>& firstVector, const vector<int>& biggerVector) {
+bool CollectionsOperators :: contained(const set<int>& firstVector, const set<int>& biggerVector) {
     if(biggerVector.size() < firstVector.size())
         return false;
     for(int elem : firstVector) {
@@ -12,7 +12,7 @@ bool CollectionsOperators :: contained(const vector<int>& firstVector, const vec
     }
     return true;
 }
-bool CollectionsOperators :: belongs(int elem, const vector<int>& vector) {
+bool CollectionsOperators :: belongs(int elem, const set<int>& vector) {
     for(int vCurrentElem : vector) {
         if (elem == vCurrentElem)
             return true;

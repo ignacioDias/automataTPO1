@@ -309,4 +309,6 @@ CMakeFiles/tpOb1.dir/TP/Main.cpp.o: \
  /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/dfa/../../auxiliarmethods/CollectionsOperators.h \
  /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.h \
  /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/../AutomataInterface.h \
- /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/../../auxiliarmethods/CollectionsOperators.h
+ /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/automata/ndfa/../../auxiliarmethods/CollectionsOperators.h \
+ /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/Parser.h \
+ /home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/TP/parser/../automata/ndfa/NotDeterministicFiniteAutomata.h

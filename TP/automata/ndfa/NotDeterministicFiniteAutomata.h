@@ -11,22 +11,24 @@ using namespace std;
 
 class NotDeterministicFiniteAutomata : public AutomataInterface {
 private:
-    vector<int> K;
-    vector<int> E;
+    set<int> K;
+    set<int> E;
     map<pair<int,int>, set<int>> d;
     int q0;
-    vector<int> F;
+    set<int> F;
 
 public:
     NotDeterministicFiniteAutomata();
-    vector<int> getK();
-    vector<int> getE();
+    set<int> getK();
+    set<int> getE();
     int getInitialState();
-    vector<int> getF();
-    void setK(vector<int> states);
-    void setE(vector<int> alphabet);
+    set<int> getF();
+    void addK(int state);
+    void addE(int state);
+    void setK(set<int> states);
+    void setE(set<int> alphabet);
     void setInitialState(int q);
-    void setF(vector<int> final);
+    void setF(set<int> final);
     void addPath(int node, int arc, int destination);
     set<int> calculateDelta(pair<int,int> key);
     bool repOk();

@@ -8,18 +8,18 @@ using namespace std;
 
 class DeterministicFiniteAutomata {
 private:
-    vector<int> K;
-    vector<int> E;
+    set<int> K;
+    set<int> E;
     map<pair<int,int>, int> d;
     int q0;
-    vector<int> F;
+    set<int> F;
 
 public:
     DeterministicFiniteAutomata();
-    void setE(vector<int> alphabet);
-    void setK(vector<int> states);
+    void setE(set<int> alphabet);
+    void setK(set<int> states);
     void setInitialState(int q);
-    void setF(vector<int> final);
+    void setF(set<int> final);
     int calculateDelta(pair<int,int> key);
     void addPath(int node, int arc, int destination);
     bool repOk();

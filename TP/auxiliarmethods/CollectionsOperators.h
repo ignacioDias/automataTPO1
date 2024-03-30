@@ -7,8 +7,9 @@ using namespace std;
 
 class __attribute__((unused)) CollectionsOperators {
 public:
-    static bool contained(const vector<int>& firstVector, const vector<int>& biggerVector);
-    static bool belongs(int elem, const vector<int>& vector);
+    static bool contained(const set<int>& firstVector, const set<int>& biggerVector);
+    static bool belongs(int elem, const set<int>& vector);
+
 };
 
 #endif //TPOB1_COLLECTIONSOPERATORS_H

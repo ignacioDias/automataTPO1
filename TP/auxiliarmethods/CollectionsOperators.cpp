@@ -3,19 +3,28 @@
 
 using namespace std;
 
-bool CollectionsOperators :: contained(const set<int>& firstVector, const set<int>& biggerVector) {
-    if(biggerVector.size() < firstVector.size())
+bool CollectionsOperators :: contained(const set<int>& firstSet, const set<int>& biggerSet) {
+    if(biggerSet.size() < firstSet.size())
         return false;
-    for(int elem : firstVector) {
-        if (!belongs(elem, biggerVector))
+    for(int elem : firstSet) {
+        if (!belongs(elem, biggerSet))
             return false;
     }
     return true;
 }
-bool CollectionsOperators :: belongs(int elem, const set<int>& vector) {
-    for(int vCurrentElem : vector) {
-        if (elem == vCurrentElem)
+bool CollectionsOperators :: belongs(int elem, const set<int>& set) {
+    for(int sCurrentElem : set) {
+        if (elem == sCurrentElem)
             return true;
     }
     return false;
 }
+bool CollectionsOperators :: setContained(set<set<int>> firstSet, set<int> biggerSet) {
+    bool ret = true;
+    for(auto currentSet : firstSet) {
+        if(!contained(currentSet,biggerSet))
+            return false;
+    }
+    return true;
+}
+

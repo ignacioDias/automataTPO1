@@ -10,7 +10,7 @@ class DeterministicFiniteAutomata {
 private:
     set<set<int>> K;
     set<int> E;
-    map<pair<set<int>,int>, int> d;
+    map<pair<set<int>,int>, set<int>> d;
     set<int> q0;
     set<set<int>> F;
 
@@ -20,9 +20,13 @@ public:
     void setK(set<set<int>> states);
     void setInitialState(set<int> q);
     void setF(set<set<int>> final);
-    int calculateDelta(pair<set<int>,int> key);
-    void addPath(set<int> node, int arc, int destination);
+    set<int> calculateDelta(const pair<set<int>,int>& key);
+    void addPath(set<int> node, int arc, set<int> destination);
     bool repOk();
     void setQ0(set<int> q0);
+    bool belongs(string numbers);
+    set<set<int>> getF();
+private:
+    bool isFinalNode(set<int> node);
 };
 #endif // DETERMINISTICFINITEAUTOMATA_H

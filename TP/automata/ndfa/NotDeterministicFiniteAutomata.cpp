@@ -59,7 +59,7 @@ bool NotDeterministicFiniteAutomata :: repOk() {
     invariant &= CollectionsOperators::belongs(this->q0, this->K);
     return invariant;
 }
-DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
+DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() { //TODO: FLATA ADD PATH, LOS NODOS NO ESTÁN REALMENTE VINCULADOS
     DeterministicFiniteAutomata convertedAutomata = *new DeterministicFiniteAutomata();
 
     set<int> q0AsSet;

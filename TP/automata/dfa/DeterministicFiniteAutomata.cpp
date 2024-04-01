@@ -22,13 +22,13 @@ void DeterministicFiniteAutomata :: setInitialState(set<int> q) {
 void DeterministicFiniteAutomata :: setF(set<set<int>> final) {
     this->F = final;
 }
-int DeterministicFiniteAutomata :: calculateDelta(pair<set<int>,int> key) {
-    if (d.count(key))
-        return d[key];
-    throw std::out_of_range("La clave no tiene un valor asociado.");
-
+set<set<int>> DeterministicFiniteAutomata :: getF() {
+    return this->F;
 }
-void DeterministicFiniteAutomata :: addPath(set<int> node, int arc, int destination) {
+set<int> DeterministicFiniteAutomata :: calculateDelta(const pair<set<int>,int>& key) {
+    return d[key];
+}
+void DeterministicFiniteAutomata :: addPath(set<int> node, int arc, set<int> destination) {
     pair<set<int>,int> path;
     path.first = std::move(node);
     path.second = arc;
@@ -47,5 +47,24 @@ bool DeterministicFiniteAutomata :: repOk() {
         invariant &= CollectionsOperators::contained(this->q0, currentSet);
     }
     return invariant;
+}
+bool DeterministicFiniteAutomata :: belongs(string numbers) {
+    set<int> currentNode = q0;
+    for(char ch : numbers) {
+        pair<set<int>, int> key;
+        key.first = currentNode;
+        key.second = stoi(string(1, ch));
+        if(d.count(key) == 0)
+            return false;
+        currentNode = calculateDelta(key);
+    }
+    return isFinalNode(currentNode);
+}
+bool DeterministicFiniteAutomata :: isFinalNode(set<int> node) {
+    for(auto currentNode : getF()) {
+        if(currentNode == node)
+            return true;
+    }
+    return false;
 }
 

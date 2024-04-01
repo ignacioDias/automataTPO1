@@ -23,5 +23,6 @@ public:
     int calculateDelta(pair<set<int>,int> key);
     void addPath(set<int> node, int arc, int destination);
     bool repOk();
+    void setQ0(set<int> q0);
 };
 #endif // DETERMINISTICFINITEAUTOMATA_H

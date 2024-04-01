@@ -27,4 +27,9 @@ bool CollectionsOperators :: setContained(set<set<int>> firstSet, set<int> bigge
     }
     return true;
 }
+void CollectionsOperators :: insertAll(set<int> setToBeModify, const set<int>& otherSet) {
+    for(auto elem : otherSet) {
+        setToBeModify.insert(elem);
+    }
+}
 

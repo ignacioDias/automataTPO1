@@ -9,6 +9,10 @@ DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0()
 void DeterministicFiniteAutomata::setE(set<int> alphabet) {
     this->E = alphabet;
 }
+void DeterministicFiniteAutomata::setQ0(set<int> q0) {
+    this->q0 = q0;
+}
+
 void DeterministicFiniteAutomata :: setK(set<set<int>> states) {
     this->K = states;
 }
@@ -44,3 +48,4 @@ bool DeterministicFiniteAutomata :: repOk() {
     }
     return invariant;
 }
+

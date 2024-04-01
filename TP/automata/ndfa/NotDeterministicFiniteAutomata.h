@@ -35,9 +35,9 @@ public:
     bool repOk();
     DeterministicFiniteAutomata nfaToDfa();
 private:
-    set<int> lambdaClosure(const set<int>& Q);
+    set<int> getSymbolClosure(const set<int> Q, int symbol);
     set<int> move(const set<int>& Q, int a);
-    static void insertAll(set<int> setToBeModify, const set<int>& otherSet);
-
+    set<set<int>> calculateFinal(set<set<int>> k);
+    void calculateNewK(set<set<int>> newK);
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

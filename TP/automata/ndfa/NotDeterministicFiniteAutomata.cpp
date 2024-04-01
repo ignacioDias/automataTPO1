@@ -61,19 +61,63 @@ bool NotDeterministicFiniteAutomata :: repOk() {
 }
 DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     DeterministicFiniteAutomata convertedAutomata = *new DeterministicFiniteAutomata();
+
+    set<int> q0AsSet;
+    q0AsSet.insert(getInitialState());
+    set<int> Q0 = getSymbolClosure(q0AsSet, LAMBDA);
+    convertedAutomata.setQ0(Q0);
+    set<set<int>> newK;
+    newK.insert(Q0);
+
+    convertedAutomata.setE(getE());
+
+    calculateNewK(newK);
+    convertedAutomata.setK(newK);
+    convertedAutomata.setF(calculateFinal(newK));
     return convertedAutomata;
 }
-set<int> NotDeterministicFiniteAutomata :: lambdaClosure(const set<int>& Q) { //TODO: BORRAR Y SIMULARLA CON UNA INVOCACIÓN DE MOVE CON LAMBDA
-    set<int> ret;
-    for(auto elem : Q) {
-        pair<int,int> actualPair;
-        actualPair.first = elem;
-        actualPair.second = LAMBDA;
-        set<int> actualSet = calculateDelta(actualPair);
-        if(!actualSet.empty())
-            insertAll(ret, actualSet);
+void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK) {
+    set<set<int>> unvisitedNodes = newK;
+    for(const auto& currentNode : unvisitedNodes) {
+        for (auto currentNumber: getE()) {
+            set<int> currentSet = move(currentNode, currentNumber);
+            if (newK.count(currentSet) == 0) {
+                newK.insert(currentSet);
+                unvisitedNodes.insert((currentSet));
+            }
+        }
+        unvisitedNodes.erase(currentNode);
     }
-    return ret;
+}
+
+set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
+    set<set<int>> newF;
+    for(const auto& currentSet : k) {
+        for(auto currentNumber : currentSet) {
+            if(getF().count(currentNumber) > 0) {
+                newF.insert(currentSet);
+                break;
+            }
+        }
+    }
+    return newF;
+}
+set<int> NotDeterministicFiniteAutomata :: getSymbolClosure(const set<int> Q, int symbol) {
+    set<int> result;
+    set<int> visited_states;
+    set<int> unvisited_states = Q;
+    while (unvisited_states.size() > 0) {
+        int curr_state = *unvisited_states.begin();
+        unvisited_states.erase(curr_state);
+        visited_states.insert(curr_state);
+        set<int> reachable_states = calculateDelta({curr_state, symbol});
+        for (int reachable_state : reachable_states) {
+            result.insert(reachable_state);
+            if (visited_states.find(reachable_state) == visited_states.end())
+                unvisited_states.insert(reachable_state);
+        }
+    }
+    return result;
 }
 set<int> NotDeterministicFiniteAutomata :: move(const set<int>& Q, int a) {
     set<int> ret;
@@ -83,12 +127,7 @@ set<int> NotDeterministicFiniteAutomata :: move(const set<int>& Q, int a) {
         actualPair.second = a;
         set<int> actualSet = calculateDelta(actualPair);
         if(!actualSet.empty())
-            insertAll(ret, actualSet);
+            CollectionsOperators::insertAll(ret, actualSet);
     }
     return ret;
-}
-void NotDeterministicFiniteAutomata :: insertAll(set<int> setToBeModify, const set<int>& otherSet) {
-    for(auto elem : otherSet) {
-        setToBeModify.insert(elem);
-    }
 }

@@ -11,20 +11,18 @@ class Parser {
 public:
     static void identifyFormat(const string& line);
     Parser();
-    ~Parser();
-    bool validateTextFile(vector<string> lines);
 
-        void addInitialStateFromInitialStateLine(string line);
-        void addFinalStateFromFinalStateLine(string line);
-        void addAutomataInformationFromTransitionLine(string line);
-        void fileManagement(string line);
-        NotDeterministicFiniteAutomata getNDA();
-        static bool validateInitialStateLine(string line);
-        static bool validateFirstLine(string line);
-        static bool validateLastLine(string line);
-        bool validateTransitionLine(string line);
-        bool validateFinalStateLine(string line);
-        bool isRankdirLine(string line);
+    void addInitialStateFromInitialStateLine(const string& line);
+    void addFinalStateFromFinalStateLine(const string& line);
+    void addAutomataInformationFromTransitionLine(string line);
+    void fileManagement(const string& line);
+    NotDeterministicFiniteAutomata getNDA();
+    static bool validateInitialStateLine(string line);
+    static bool validateFirstLine(const string& line);
+    static bool validateLastLine(const string& line);
+    static bool validateTransitionLine(const string& line);
+    static bool validateFinalStateLine(const string& line);
+    bool isRankdirLine(const string& line);
 
 
 private:

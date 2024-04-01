@@ -34,5 +34,10 @@ public:
     set<int> calculateDelta(pair<int,int> key);
     bool repOk();
     DeterministicFiniteAutomata nfaToDfa();
+private:
+    set<int> lambdaClosure(const set<int>& Q);
+    set<int> move(const set<int>& Q, int a);
+    static void insertAll(set<int> setToBeModify, const set<int>& otherSet);
+
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

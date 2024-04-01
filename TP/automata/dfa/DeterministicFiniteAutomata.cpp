@@ -19,7 +19,10 @@ void DeterministicFiniteAutomata :: setF(set<int> final) {
     this->F = final;
 }
 int DeterministicFiniteAutomata :: calculateDelta(pair<int,int> key) {
-    return d[key];
+    if (d.count(key))
+        return d[key];
+    throw std::out_of_range("La clave no tiene un valor asociado.");
+
 }
 void DeterministicFiniteAutomata :: addPath(int node, int arc, int destination) {
     pair<int,int> path;

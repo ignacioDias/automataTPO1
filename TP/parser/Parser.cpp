@@ -18,47 +18,44 @@ bool Parser :: checkDelta(const string& line) {
 }
 
 Parser::Parser() {
-    NotDeterministicFiniteAutomata nda; 
+    NotDeterministicFiniteAutomata nda;
     bool readLastLine = false;
 }
 
-Parser::~Parser() {
-}
-
-bool Parser::validateFirstLine(string line){
+bool Parser::validateFirstLine(const string& line){
     return line == "digraph{"; 
 }
-bool Parser::validateLastLine(string line){
+bool Parser::validateLastLine(const string& line){
     return line == "}";
 }
 
-bool Parser::validateTransitionLine(string line){
-    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)(,\\d+|_)*\\]"); //ej: 000 -> 111 [label = _]
+bool Parser::validateTransitionLine(const string& line){
+    regex regex(R"(\d+ -> \d+ \[label = (\d+|_)(,\d+|_)*\])"); //ej: 000 -> 111 [label = _]
     return regex_search(line, regex);
 }
 
 bool Parser::validateInitialStateLine(string line){
-    regex regex("inic\\[shape = point\\];inic-> \\d+;"); //ej: inic[shape = point];inic-> 000;
+    regex regex(R"(inic\[shape = point\];inic-> \d+;)"); //ej: inic[shape = point];inic-> 000;
     return regex_search(line, regex);
 }
 
-bool Parser::validateFinalStateLine(string line){
-    regex regex("\\d+\\[shape = doublecircle\\];"); //ej: 111[shape = doublecircle];
+bool Parser::validateFinalStateLine(const string& line){
+    regex regex(R"(\d+\[shape = doublecircle\];)"); //ej: 111[shape = doublecircle];
     return regex_search(line, regex);
 }
 
-void Parser::addInitialStateFromInitialStateLine(string line){
+void Parser::addInitialStateFromInitialStateLine(const string& line){
     regex regex("(\\d+)");
     smatch match;
     regex_search(line, match, regex);
     nda.setInitialState(stoi(match[1])); // stoi convierte string a int
 }
 
-bool Parser:: isRankdirLine(string line){
+bool Parser:: isRankdirLine(const string& line){
     return line == "rankdir=LR;";
 }
 
-void Parser::addFinalStateFromFinalStateLine(string line){
+void Parser::addFinalStateFromFinalStateLine(const string& line){
     regex regex("(\\d+)");
     smatch match;
     regex_search(line, match, regex);
@@ -67,7 +64,7 @@ void Parser::addFinalStateFromFinalStateLine(string line){
 
 void Parser::addAutomataInformationFromTransitionLine(string line){
     int const LAMBDA = -1; 
-    regex regex("\\d+ -> \\d+ \\[label = (\\d+|_)(,\\d+|_)*\\]"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
+    regex regex(R"(\d+ -> \d+ \[label = (\d+|_)(,\d+|_)*\])"); // regex("\\d+ -> \\d+ \\[label = (\\d+|_)\\]"); //ej: 000 -> 111 [label = _]
     smatch match;
     regex_search(line, match, regex);
     int stateFrom = stoi(match[1]);
@@ -91,16 +88,14 @@ NotDeterministicFiniteAutomata Parser::getNDA(){
     return nda;
 }
 
-void Parser::fileManagement(string line){
-    if (validateTransitionLine(line)){
+void Parser::fileManagement(const string& line) {
+    if (validateTransitionLine(line))
         addAutomataInformationFromTransitionLine(line);
-    } else if (validateInitialStateLine(line)){
+    else if (validateInitialStateLine(line))
         addInitialStateFromInitialStateLine(line);
-    } else if (validateFinalStateLine(line)){
+    else if (validateFinalStateLine(line)) {
         addFinalStateFromFinalStateLine(line);
         readLastLine = true; 
-    } else if(!isRankdirLine(line) || line == "}" && readLastLine){
-        cerr << "Formato invalido del archivo." << endl;
-        exit(-1);
-    }
+    } else if(!isRankdirLine(line) || line == "}" && readLastLine)
+        throw runtime_error("Formato invalido del archivo.");
 }

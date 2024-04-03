@@ -71,20 +71,20 @@ DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() { //TOD
 
     convertedAutomata.setE(getE());
 
-    calculateNewK(newK);
+    calculateNewK(newK, convertedAutomata);
     convertedAutomata.setK(newK);
     convertedAutomata.setF(calculateFinal(newK));
     return convertedAutomata;
 }
-void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK) {
+void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK, DeterministicFiniteAutomata dfa) {
     set<set<int>> unvisitedNodes = newK;
     for(const auto& currentNode : unvisitedNodes) {
         for (auto currentNumber: getE()) {
             set<int> currentSet = move(currentNode, currentNumber);
-            if (newK.count(currentSet) == 0) {
-                newK.insert(currentSet);
-                unvisitedNodes.insert((currentSet));
-            }
+            currentSet = getSymbolClosure(currentSet, LAMBDA);
+            newK.insert(currentSet);
+            unvisitedNodes.insert((currentSet));
+            dfa.addPath(currentNode, currentNumber,currentSet);
         }
         unvisitedNodes.erase(currentNode);
     }

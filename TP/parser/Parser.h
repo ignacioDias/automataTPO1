@@ -17,18 +17,19 @@ public:
     void addAutomataInformationFromTransitionLine(string line);
     void fileManagement(const string& line);
     NotDeterministicFiniteAutomata getNDA();
-    static bool validateInitialStateLine(string line);
+    static bool validateInitialStateLine(string line); //priv?
     static bool validateFirstLine(const string& line);
     static bool validateLastLine(const string& line);
     static bool validateTransitionLine(const string& line);
     static bool validateFinalStateLine(const string& line);
     bool isRankdirLine(const string& line);
-
+    string dnaToFile(DeterministicFiniteAutomata dfa);
 
 private:
     static bool checkDelta(const string& line);
     NotDeterministicFiniteAutomata nda; 
-    bool readLastLine; 
+    bool readLastLine;
+
 };
 
 

@@ -23,10 +23,11 @@ public:
     set<int> calculateDelta(const pair<set<int>,int>& key);
     void addPath(set<int> node, int arc, set<int> destination);
     bool repOk();
-    void setQ0(set<int> q0);
     bool belongs(string numbers);
     set<set<int>> getF();
+    set<int> getInitialState();
 private:
-    bool isFinalNode(set<int> node);
+    bool isFinalNode(const set<int>& node);
+
 };
 #endif // DETERMINISTICFINITEAUTOMATA_H

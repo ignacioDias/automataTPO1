@@ -99,3 +99,9 @@ void Parser::fileManagement(const string& line) {
     } else if(!isRankdirLine(line) || line == "}" && readLastLine)
         throw runtime_error("Formato invalido del archivo.");
 }
+string Parser::dnaToFile(DeterministicFiniteAutomata dfa) {
+    string ret = "digraph{"
+                 "inic[shape=point];"
+                 "inic->";
+    return ret;
+}

@@ -37,7 +37,7 @@ public:
     set<int> calculateWaysToGo(int from, int destination);
 
 private:
-    set<int> getSymbolClosure(const set<int> Q, int symbol);
+    set<int> getSymbolClosure(const set<int>& Q);
     set<int> move(const set<int>& Q, int a);
     set<set<int>> calculateFinal(set<set<int>> k);
     void calculateNewK(set<set<int>> newK, DeterministicFiniteAutomata dfa);

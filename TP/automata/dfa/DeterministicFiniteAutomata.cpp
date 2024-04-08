@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+
+#include <utility>
 #include "DeterministicFiniteAutomata.h"
 #include "../AutomataInterface.h"
 #include "../../auxiliarmethods/CollectionsOperators.h"
@@ -7,14 +9,13 @@ using namespace std;
 DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0(), F() {
 }
 void DeterministicFiniteAutomata::setE(set<int> alphabet) {
-    this->E = alphabet;
+    this->E = std::move(alphabet);
 }
 set<int> DeterministicFiniteAutomata::getE() {
     return this->E;
 }
-
 void DeterministicFiniteAutomata :: setK(set<set<int>> states) {
-    this->K = states;
+    this->K = std::move(states);
 }
 set<set<int>> DeterministicFiniteAutomata :: getK() {
     return this->K;
@@ -40,21 +41,19 @@ void DeterministicFiniteAutomata :: addPath(set<int> node, int arc, set<int> des
     path.second = arc;
     auto it = d.find(path);
     if (it == d.end())
-        d[path] = destination;
+        d[path] = std::move(destination);
     else
         throw runtime_error("El nodo ya tiene asignado un destino con dicho arco");
 }
 bool DeterministicFiniteAutomata :: repOk() {
-    bool invariant = CollectionsOperators::setContained(this->K, this->E);
+    bool invariant = true;
     for(auto currentSet : K) {
         invariant &= CollectionsOperators::setContained(this->F, currentSet);
-    }
-    for(auto currentSet : K) {
         invariant &= CollectionsOperators::contained(this->q0, currentSet);
     }
     return invariant;
 }
-bool DeterministicFiniteAutomata :: belongs(string numbers) {
+bool DeterministicFiniteAutomata :: belongs(const string& numbers) {
     set<int> currentNode = q0;
     for(char ch : numbers) {
         pair<set<int>, int> key;

@@ -25,7 +25,7 @@ public:
     set<int> calculateDelta(const pair<set<int>,int>& key);
     void addPath(set<int> node, int arc, set<int> destination);
     bool repOk();
-    bool belongs(string numbers);
+    bool belongs(const string& numbers);
     set<set<int>> getF();
     set<int> getInitialState();
 private:

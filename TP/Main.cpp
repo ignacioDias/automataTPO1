@@ -35,18 +35,15 @@ int main() {
 
     NotDeterministicFiniteAutomata ndfa; 
     ndfa.setInitialState(0);
-    ndfa.setE({1,2});
-    ndfa.setK({0,1,2,3});
-    ndfa.addPath(0,1,1); 
-    ndfa.addPath(1,2,1);
-    ndfa.addPath(1,2,2); 
-    ndfa.addPath(1,1,3);
-    ndfa.addPath(3,1,3);
-    ndfa.addPath(3,2,3); 
-    ndfa.addFinalState(2); 
-    
-    Parser parser; 
-    std::cout << parser.ndfaToFile(ndfa); 
-
+    ndfa.setE({1,2}); //a, b
+    ndfa.setK({10,11,12,13});
+    ndfa.addPath(10,1,11);
+    ndfa.addPath(11,2,11);
+    ndfa.addPath(11,2,12);
+    ndfa.addPath(11,1,13);
+    ndfa.addPath(13,1,13);
+    ndfa.addPath(13,2,13);
+    ndfa.addFinalState(12);
+    cout << Parser::ndfaToFile(ndfa);
     return 0;
 } 

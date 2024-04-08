@@ -100,31 +100,28 @@ void Parser::fileManagement(const string& line) {
         throw runtime_error("Formato invalido del archivo.");
 }
 string Parser::ndfaToFile(NotDeterministicFiniteAutomata ndfa) {
-    string ret = "digraph{"
-                 "inic[shape=point];"
-                 "inic->";
+    string ret = "digraph{\ninic[shape=point];\ninic->";
     ret += to_string(ndfa.getInitialState()) + ";\n";
-    toStringSates(ndfa, ret);
+    toStringStates(ndfa, ret);
     toStringFinalState(ndfa, ret);
-    ret += "}";
+    ret += "\n}";
     return ret;
 }
-void Parser::toStringSates(NotDeterministicFiniteAutomata ndfa, string ret) {
+void Parser::toStringStates(NotDeterministicFiniteAutomata ndfa, string& ret) {
     for(int number : ndfa.getK()) {
         for(int number2 : ndfa.getK()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
                 ret += to_string(number) + "->" + to_string(number2) + "label[=\"";
-                for(auto elem : label) {
+                for(auto elem : label)
                     ret += to_string(elem) + ",";
-                }
                 ret.pop_back();
-                ret += "\"];";
+                ret += "\"];\n";
             }
         }
     }
 }
-void Parser :: toStringFinalState(NotDeterministicFiniteAutomata ndfa, string ret) {
+void Parser :: toStringFinalState(NotDeterministicFiniteAutomata ndfa, string& ret) {
     for(int finalState : ndfa.getF())
         ret += to_string(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();

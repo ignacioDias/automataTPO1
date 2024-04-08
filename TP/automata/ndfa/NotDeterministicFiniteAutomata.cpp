@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+
+#include <utility>
 #include "../dfa/DeterministicFiniteAutomata.h"
 #include "../../auxiliarmethods/CollectionsOperators.h"
 #include "NotDeterministicFiniteAutomata.h"
@@ -21,16 +23,16 @@ set<int> NotDeterministicFiniteAutomata :: getF() {
     return F;
 }
 void NotDeterministicFiniteAutomata :: setK(set<int> states) {
-    this->K = states;
+    this->K = std::move(states);
 }
 void NotDeterministicFiniteAutomata :: setE(set<int> alphabet) {
-    this->E = alphabet;
+    this->E = std::move(alphabet);
 }
 void NotDeterministicFiniteAutomata :: setInitialState(int q) {
     this->q0 = q;
 }
 void NotDeterministicFiniteAutomata :: setF(set<int> final) {
-    this->F = final;
+    this->F = std::move(final);
 }
 void NotDeterministicFiniteAutomata :: addState(int state) {
     this->K.insert(state);
@@ -48,23 +50,19 @@ void NotDeterministicFiniteAutomata :: addPath(int node, int arc, int destinatio
     d[path].insert(destination);
 }
 set<int> NotDeterministicFiniteAutomata :: calculateDelta(pair<int,int> key) {
-    set<int> retEmpty;
     if(d.find(key) == d.end())
-        return retEmpty;
+        return {};
     return d[key];
 }
 bool NotDeterministicFiniteAutomata :: repOk() {
-    bool invariant = CollectionsOperators::contained(this->K, this->E);
-    invariant &= CollectionsOperators::contained(this->F, this->K);
-    invariant &= CollectionsOperators::belongs(this->q0, this->K);
-    return invariant;
+    bool invariant = CollectionsOperators::contained(this->F, this->K);
+    return invariant &= CollectionsOperators::belongs(this->q0, this->K);
 }
-DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() { //TODO: FLATA ADD PATH, LOS NODOS NO ESTÁN REALMENTE VINCULADOS
+DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     DeterministicFiniteAutomata convertedAutomata = *new DeterministicFiniteAutomata();
-
     set<int> q0AsSet;
     q0AsSet.insert(getInitialState());
-    set<int> Q0 = getSymbolClosure(q0AsSet, LAMBDA);
+    set<int> Q0 = getSymbolClosure(q0AsSet);
     convertedAutomata.setInitialState(Q0);
     set<set<int>> newK;
     newK.insert(Q0);
@@ -81,7 +79,7 @@ void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK, Determi
     for(const auto& currentNode : unvisitedNodes) {
         for (auto currentNumber: getE()) {
             set<int> currentSet = move(currentNode, currentNumber);
-            currentSet = getSymbolClosure(currentSet, LAMBDA);
+            currentSet = getSymbolClosure(currentSet);
             newK.insert(currentSet);
             unvisitedNodes.insert((currentSet));
             dfa.addPath(currentNode, currentNumber,currentSet);
@@ -95,12 +93,12 @@ set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int desti
         pair<int,int> pair;
         pair.first = from;
         pair.second = letter;
-        if(!calculateDelta(pair).empty())
+        set<int> delta = calculateDelta(pair);
+        if(!delta.empty() && delta.count(destination) > 0)
             ret.insert(letter);
     }
     return ret;
 }
-
 set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
     set<set<int>> newF;
     for(const auto& currentSet : k) {
@@ -113,15 +111,15 @@ set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) 
     }
     return newF;
 }
-set<int> NotDeterministicFiniteAutomata :: getSymbolClosure(const set<int> Q, int symbol) {
+set<int> NotDeterministicFiniteAutomata ::getSymbolClosure(const set<int>& Q) {
     set<int> result;
     set<int> visited_states;
     set<int> unvisited_states = Q;
-    while (unvisited_states.size() > 0) {
+    while (!unvisited_states.empty()) {
         int curr_state = *unvisited_states.begin();
         unvisited_states.erase(curr_state);
         visited_states.insert(curr_state);
-        set<int> reachable_states = calculateDelta({curr_state, symbol});
+        set<int> reachable_states = calculateDelta({curr_state, LAMBDA});
         for (int reachable_state : reachable_states) {
             result.insert(reachable_state);
             if (visited_states.find(reachable_state) == visited_states.end())

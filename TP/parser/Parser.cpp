@@ -99,7 +99,7 @@ void Parser::fileManagement(const string& line) {
     } else if(!isRankdirLine(line) || line == "}" && readLastLine)
         throw runtime_error("Formato invalido del archivo.");
 }
-string Parser::ndnaToFile(NotDeterministicFiniteAutomata ndfa) {
+string Parser::ndfaToFile(NotDeterministicFiniteAutomata ndfa) {
     string ret = "digraph{"
                  "inic[shape=point];"
                  "inic->";
@@ -112,7 +112,7 @@ string Parser::ndnaToFile(NotDeterministicFiniteAutomata ndfa) {
 void Parser::toStringSates(NotDeterministicFiniteAutomata ndfa, string ret) {
     for(int number : ndfa.getK()) {
         for(int number2 : ndfa.getK()) {
-            set<int> label = ndfa.calculateWaysToGo(number,number2);q3->q3 [label="a,b"];
+            set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
                 ret += to_string(number) + "->" + to_string(number2) + "label[=\"";
                 for(auto elem : label) {

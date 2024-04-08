@@ -65,7 +65,7 @@ DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() { //TOD
     set<int> q0AsSet;
     q0AsSet.insert(getInitialState());
     set<int> Q0 = getSymbolClosure(q0AsSet, LAMBDA);
-    convertedAutomata.setQ0(Q0);
+    convertedAutomata.setInitialState(Q0);
     set<set<int>> newK;
     newK.insert(Q0);
 

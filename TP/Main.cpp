@@ -5,7 +5,8 @@
 using namespace std;
 
 int main() {
-    string filename = "archivo.txt"; // Nombre del archivo
+    /**
+        string filename = "archivo.txt"; // Nombre del archivo
     ifstream file(filename);     // Abrir el archivo
     Parser parser = *new Parser();
 
@@ -30,6 +31,22 @@ int main() {
     }
 
     file.close();
+    */
+
+    NotDeterministicFiniteAutomata ndfa; 
+    ndfa.setInitialState(0);
+    ndfa.setE({1,2});
+    ndfa.setK({0,1,2,3});
+    ndfa.addPath(0,1,1); 
+    ndfa.addPath(1,2,1);
+    ndfa.addPath(1,2,2); 
+    ndfa.addPath(1,1,3);
+    ndfa.addPath(3,1,3);
+    ndfa.addPath(3,2,3); 
+    ndfa.addFinalState(2); 
+    
+    Parser parser; 
+    std::cout << parser.ndfaToFile(ndfa); 
 
     return 0;
 } 

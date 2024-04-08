@@ -23,7 +23,7 @@ public:
     static bool validateTransitionLine(const string& line);
     static bool validateFinalStateLine(const string& line);
     bool isRankdirLine(const string& line);
-    string ndnaToFile(NotDeterministicFiniteAutomata ndfa);
+    string ndfaToFile(NotDeterministicFiniteAutomata ndfa);
 
 private:
     static bool checkDelta(const string& line);

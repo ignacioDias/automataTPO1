@@ -34,6 +34,8 @@ public:
     set<int> calculateDelta(pair<int,int> key);
     bool repOk();
     DeterministicFiniteAutomata nfaToDfa();
+    set<int> calculateWaysToGo(int from, int destination);
+
 private:
     set<int> getSymbolClosure(const set<int> Q, int symbol);
     set<int> move(const set<int>& Q, int a);

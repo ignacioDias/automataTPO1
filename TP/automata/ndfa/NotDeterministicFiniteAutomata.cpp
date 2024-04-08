@@ -89,6 +89,17 @@ void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK, Determi
         unvisitedNodes.erase(currentNode);
     }
 }
+set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int destination) {
+    set<int> ret;
+    for(int letter : this->E) {
+        pair<int,int> pair;
+        pair.first = from;
+        pair.second = letter;
+        if(!calculateDelta(pair).empty())
+            ret.insert(letter);
+    }
+    return ret;
+}
 
 set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
     set<set<int>> newF;

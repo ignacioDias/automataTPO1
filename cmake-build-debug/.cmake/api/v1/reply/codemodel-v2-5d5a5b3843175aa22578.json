@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug",
-		"source" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1"
+		"build" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug",
+		"source" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1"
 	},
 	"version" : 
 	{

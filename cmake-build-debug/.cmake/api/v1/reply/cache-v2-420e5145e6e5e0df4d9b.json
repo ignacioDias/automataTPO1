@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug"
+			"value" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -627,7 +627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -687,7 +687,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1"
+			"value" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1283,7 +1283,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1/cmake-build-debug"
+			"value" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug"
 		},
 		{
 			"name" : "tpOb1_IS_TOP_LEVEL",
@@ -1307,7 +1307,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ignaciodias/Desktop/Uni/Automatas/automataTPO1"
+			"value" : "/home/ignaciodias/Desktop/uni/automatas/automataTPO1"
 		}
 	],
 	"kind" : "cache",

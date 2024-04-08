@@ -18,6 +18,8 @@ public:
     DeterministicFiniteAutomata();
     void setE(set<int> alphabet);
     void setK(set<set<int>> states);
+    set<set<int>> getK();
+    set<int> getE();
     void setInitialState(set<int> q);
     void setF(set<set<int>> final);
     set<int> calculateDelta(const pair<set<int>,int>& key);

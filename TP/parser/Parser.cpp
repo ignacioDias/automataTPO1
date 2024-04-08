@@ -99,9 +99,33 @@ void Parser::fileManagement(const string& line) {
     } else if(!isRankdirLine(line) || line == "}" && readLastLine)
         throw runtime_error("Formato invalido del archivo.");
 }
-string Parser::dnaToFile(DeterministicFiniteAutomata dfa) {
+string Parser::ndnaToFile(NotDeterministicFiniteAutomata ndfa) {
     string ret = "digraph{"
                  "inic[shape=point];"
                  "inic->";
+    ret += to_string(ndfa.getInitialState()) + ";\n";
+    toStringSates(ndfa, ret);
+    toStringFinalState(ndfa, ret);
+    ret += "}";
     return ret;
+}
+void Parser::toStringSates(NotDeterministicFiniteAutomata ndfa, string ret) {
+    for(int number : ndfa.getK()) {
+        for(int number2 : ndfa.getK()) {
+            set<int> label = ndfa.calculateWaysToGo(number,number2);q3->q3 [label="a,b"];
+            if(!label.empty()) {
+                ret += to_string(number) + "->" + to_string(number2) + "label[=\"";
+                for(auto elem : label) {
+                    ret += to_string(elem) + ",";
+                }
+                ret.pop_back();
+                ret += "\"];";
+            }
+        }
+    }
+}
+void Parser :: toStringFinalState(NotDeterministicFiniteAutomata ndfa, string ret) {
+    for(int finalState : ndfa.getF())
+        ret += to_string(finalState) + "[shape=doublecircle];\n";
+    ret.pop_back();
 }

@@ -23,12 +23,14 @@ public:
     static bool validateTransitionLine(const string& line);
     static bool validateFinalStateLine(const string& line);
     bool isRankdirLine(const string& line);
-    string dnaToFile(DeterministicFiniteAutomata dfa);
+    string ndnaToFile(NotDeterministicFiniteAutomata ndfa);
 
 private:
     static bool checkDelta(const string& line);
     NotDeterministicFiniteAutomata nda; 
     bool readLastLine;
+    void toStringSates(NotDeterministicFiniteAutomata ndfa, string ret);
+    void toStringFinalState(NotDeterministicFiniteAutomata ndfa, string ret);
 
 };
 

@@ -9,9 +9,15 @@ DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0()
 void DeterministicFiniteAutomata::setE(set<int> alphabet) {
     this->E = alphabet;
 }
+set<int> DeterministicFiniteAutomata::getE() {
+    return this->E;
+}
 
 void DeterministicFiniteAutomata :: setK(set<set<int>> states) {
     this->K = states;
+}
+set<set<int>> DeterministicFiniteAutomata :: getK() {
+    return this->K;
 }
 void DeterministicFiniteAutomata :: setInitialState(set<int> q) {
     this->q0 = q;
@@ -67,4 +73,6 @@ bool DeterministicFiniteAutomata :: isFinalNode(const set<int>& node) {
     }
     return false;
 }
+
+
 

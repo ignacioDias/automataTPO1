@@ -44,6 +44,6 @@ int main() {
     ndfa.addPath(13,1,13);
     ndfa.addPath(13,2,13);
     ndfa.addFinalState(12);
-    cout << Parser::ndfaToFile(ndfa);
+    cout << Parser::ndfaToString(ndfa);
     return 0;
 } 

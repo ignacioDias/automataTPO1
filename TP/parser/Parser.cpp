@@ -99,11 +99,13 @@ void Parser::fileManagement(const string& line) {
     } else if(!isRankdirLine(line) || line == "}" && readLastLine)
         throw runtime_error("Formato invalido del archivo.");
 }
-string Parser::ndfaToFile(NotDeterministicFiniteAutomata ndfa) {
-    string ret = "digraph{\ninic[shape=point];\ninic->";
+string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
+    //inicio del automata y estado inicial 
+    string ret = "digraph{\ninic[shape=point];\ninic -> "; 
     ret += to_string(ndfa.getInitialState()) + ";\n";
-    toStringStates(ndfa, ret);
-    toStringFinalState(ndfa, ret);
+
+    toStringStates(ndfa, ret); // transiciones 
+    toStringFinalState(ndfa, ret); 
     ret += "\n}";
     return ret;
 }
@@ -112,7 +114,7 @@ void Parser::toStringStates(NotDeterministicFiniteAutomata ndfa, string& ret) {
         for(int number2 : ndfa.getK()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
-                ret += to_string(number) + "->" + to_string(number2) + "label[=\"";
+                ret += to_string(number) + " -> " + to_string(number2) + " [label = \"";
                 for(auto elem : label)
                     ret += to_string(elem) + ",";
                 ret.pop_back();
@@ -125,4 +127,15 @@ void Parser :: toStringFinalState(NotDeterministicFiniteAutomata ndfa, string& r
     for(int finalState : ndfa.getF())
         ret += to_string(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();
+}
+
+void Parser::writeToFile(const string& filename, const string& content){
+    ofstream outputFile(filename); // Create an ofstream object for writing
+    if (outputFile.is_open()) { // Check if file opening succeeded
+        outputFile << content; // Write the content to the file
+        outputFile.close(); // Close the file
+        cout << "Content has been written to the file successfully." << endl;
+    } else {
+        cout << "Unable to open the file." << endl;
+    }
 }

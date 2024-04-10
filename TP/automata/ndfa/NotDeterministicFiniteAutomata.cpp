@@ -86,15 +86,18 @@ DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     convertedAutomata.setF(calculateFinal(newK));
     return convertedAutomata;
 }
-void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK, DeterministicFiniteAutomata dfa) {
+void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>>& newK, DeterministicFiniteAutomata dfa) {
     set<set<int>> unvisitedNodes = newK;
-    for(const auto& currentNode : unvisitedNodes) {
+    while(!unvisitedNodes.empty()) {
+        auto currentNode = *unvisitedNodes.begin();
         for (auto currentNumber: getE()) {
             set<int> currentSet = move(currentNode, currentNumber);
             currentSet = getSymbolClosure(currentSet);
-            newK.insert(currentSet);
-            unvisitedNodes.insert((currentSet));
-            dfa.addPath(currentNode, currentNumber,currentSet);
+            if (newK.count(currentSet) <= 0) {
+                newK.insert(currentSet);
+                unvisitedNodes.insert(currentSet);
+                dfa.addPath(currentNode, currentNumber, currentSet);
+            }
         }
         unvisitedNodes.erase(currentNode);
     }
@@ -108,6 +111,8 @@ set<int> NotDeterministicFiniteAutomata ::getSymbolClosure(const set<int>& Q) {
         unvisited_states.erase(curr_state);
         visited_states.insert(curr_state);
         set<int> reachable_states = calculateDelta({curr_state, LAMBDA});
+        if(reachable_states.empty())
+            result.insert(curr_state);
         for (int reachable_state : reachable_states) {
             result.insert(reachable_state);
             if (visited_states.find(reachable_state) == visited_states.end())
@@ -128,7 +133,7 @@ set<int> NotDeterministicFiniteAutomata :: move(const set<int>& Q, int a) {
     }
     return ret;
 }
-set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
+set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(const set<set<int>>& k) {
     set<set<int>> newF;
     for(const auto& currentSet : k) {
         for(auto currentNumber : currentSet) {

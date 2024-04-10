@@ -39,7 +39,7 @@ public:
 private:
     set<int> getSymbolClosure(const set<int>& Q);
     set<int> move(const set<int>& Q, int a);
-    set<set<int>> calculateFinal(set<set<int>> k);
-    void calculateNewK(set<set<int>> newK, DeterministicFiniteAutomata dfa);
+    set<set<int>> calculateFinal(const set<set<int>>& k);
+    void calculateNewK(set<set<int>>& newK, DeterministicFiniteAutomata dfa);
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

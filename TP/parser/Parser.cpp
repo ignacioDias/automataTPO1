@@ -115,10 +115,11 @@ string Parser::toStringSet(const set<int>& set) {
     return ret;
 }
 void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret) {
-    for(auto set1 : dfa.getK()) {
-        for(auto set2 : dfa.getK()) {
+    for(const auto& set1 : dfa.getK()) {
+        for(const auto& set2 : dfa.getK()) {
             set<int> label = dfa.calculateWaysToGo(set1, set2);
             if(!label.empty()) {
+                printf("dasdasd\n");
                 ret += toStringSet(set1) + " -> " + toStringSet(set2) + " [label = \"";
                 for(auto elem : label)
                     ret += to_string(elem) + ",";

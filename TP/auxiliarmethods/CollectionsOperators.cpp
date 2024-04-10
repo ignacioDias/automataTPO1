@@ -19,15 +19,15 @@ bool CollectionsOperators :: belongs(int elem, const set<int>& set) {
     }
     return false;
 }
-bool CollectionsOperators :: setContained(set<set<int>> firstSet, set<int> biggerSet) {
+bool CollectionsOperators :: setContained(const set<set<int>>& firstSet, const set<int>& biggerSet) {
     bool ret = true;
-    for(auto currentSet : firstSet) {
+    for(const auto& currentSet : firstSet) {
         if(!contained(currentSet,biggerSet))
             return false;
     }
     return true;
 }
-void CollectionsOperators :: insertAll(set<int> setToBeModify, const set<int>& otherSet) {
+void CollectionsOperators :: insertAll(set<int>& setToBeModify, const set<int>& otherSet) {
     for(auto elem : otherSet) {
         setToBeModify.insert(elem);
     }

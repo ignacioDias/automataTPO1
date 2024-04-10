@@ -99,17 +99,50 @@ void Parser::fileManagement(const string& line) {
     } else if(!isRankdirLine(line) || line == "}" && readLastLine)
         throw runtime_error("Formato invalido del archivo.");
 }
-string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
-    //inicio del automata y estado inicial 
-    string ret = "digraph{\ninic[shape=point];\ninic -> "; 
-    ret += to_string(ndfa.getInitialState()) + ";\n";
-
-    toStringStates(ndfa, ret); // transiciones 
-    toStringFinalState(ndfa, ret); 
+string Parser::dfaToString(DeterministicFiniteAutomata dfa) {
+    string ret = "digraph{\ninic[shape=point];\ninic->";
+    ret += "{\"" + toStringSet(dfa.getInitialState()) + "\"};\n";
+    toStringStatesDFA(dfa, ret);
+    toStringFinalStateDFA(dfa, ret);
     ret += "\n}";
     return ret;
 }
-void Parser::toStringStates(NotDeterministicFiniteAutomata ndfa, string& ret) {
+string Parser::toStringSet(const set<int>& set) {
+    string ret;
+    for(auto elem : set)
+        ret += to_string(elem) + ",";
+    ret.pop_back();
+    return ret;
+}
+void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret) {
+    for(auto set1 : dfa.getK()) {
+        for(auto set2 : dfa.getK()) {
+            set<int> label = dfa.calculateWaysToGo(set1, set2);
+            if(!label.empty()) {
+                ret += toStringSet(set1) + " -> " + toStringSet(set2) + " [label = \"";
+                for(auto elem : label)
+                    ret += to_string(elem) + ",";
+                ret.pop_back();
+                ret += "\"];\n";
+            }
+        }
+    }
+}
+void Parser :: toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& ret) {
+    for(set<int> finalState : dfa.getF())
+        ret += toStringSet(finalState) + "[shape=doublecircle];\n";
+    ret.pop_back();
+}
+
+string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
+    string ret = "digraph{\ninic[shape=point];\ninic -> ";
+    ret += to_string(ndfa.getInitialState()) + ";\n";
+    toStringStatesNDFA(ndfa, ret);
+    toStringFinalStateNDFA(ndfa, ret);
+    ret += "\n}";
+    return ret;
+}
+void Parser::toStringStatesNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
     for(int number : ndfa.getK()) {
         for(int number2 : ndfa.getK()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
@@ -123,7 +156,7 @@ void Parser::toStringStates(NotDeterministicFiniteAutomata ndfa, string& ret) {
         }
     }
 }
-void Parser :: toStringFinalState(NotDeterministicFiniteAutomata ndfa, string& ret) {
+void Parser :: toStringFinalStateNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
     for(int finalState : ndfa.getF())
         ret += to_string(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();

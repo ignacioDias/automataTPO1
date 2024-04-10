@@ -58,6 +58,18 @@ bool NotDeterministicFiniteAutomata :: repOk() {
     bool invariant = CollectionsOperators::contained(this->F, this->K);
     return invariant &= CollectionsOperators::belongs(this->q0, this->K);
 }
+set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int destination) {
+    set<int> ret;
+    for(int letter : this->E) {
+        pair<int,int> pair;
+        pair.first = from;
+        pair.second = letter;
+        set<int> delta = calculateDelta(pair);
+        if(!delta.empty() && delta.count(destination) > 0)
+            ret.insert(letter);
+    }
+    return ret;
+}
 DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     DeterministicFiniteAutomata convertedAutomata = *new DeterministicFiniteAutomata();
     set<int> q0AsSet;
@@ -87,30 +99,6 @@ void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>> newK, Determi
         unvisitedNodes.erase(currentNode);
     }
 }
-set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int destination) {
-    set<int> ret;
-    for(int letter : this->E) {
-        pair<int,int> pair;
-        pair.first = from;
-        pair.second = letter;
-        set<int> delta = calculateDelta(pair);
-        if(!delta.empty() && delta.count(destination) > 0)
-            ret.insert(letter);
-    }
-    return ret;
-}
-set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
-    set<set<int>> newF;
-    for(const auto& currentSet : k) {
-        for(auto currentNumber : currentSet) {
-            if(getF().count(currentNumber) > 0) {
-                newF.insert(currentSet);
-                break;
-            }
-        }
-    }
-    return newF;
-}
 set<int> NotDeterministicFiniteAutomata ::getSymbolClosure(const set<int>& Q) {
     set<int> result;
     set<int> visited_states;
@@ -139,4 +127,16 @@ set<int> NotDeterministicFiniteAutomata :: move(const set<int>& Q, int a) {
             CollectionsOperators::insertAll(ret, actualSet);
     }
     return ret;
+}
+set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(set<set<int>> k) {
+    set<set<int>> newF;
+    for(const auto& currentSet : k) {
+        for(auto currentNumber : currentSet) {
+            if(getF().count(currentNumber) > 0) {
+                newF.insert(currentSet);
+                break;
+            }
+        }
+    }
+    return newF;
 }

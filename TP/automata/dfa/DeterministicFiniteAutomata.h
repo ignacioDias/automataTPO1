@@ -28,6 +28,9 @@ public:
     bool belongs(const string& numbers);
     set<set<int>> getF();
     set<int> getInitialState();
+
+    set<int> calculateWaysToGo(const set<int>& set1, const set<int>& set2);
+
 private:
     bool isFinalNode(const set<int>& node);
 

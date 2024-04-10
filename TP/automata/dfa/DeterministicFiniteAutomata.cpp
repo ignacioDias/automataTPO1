@@ -73,5 +73,19 @@ bool DeterministicFiniteAutomata :: isFinalNode(const set<int>& node) {
     return false;
 }
 
+set<int> DeterministicFiniteAutomata::calculateWaysToGo(const set<int>& set1, const set<int>& set2) {
+    set<int> ret;
+    for(int letter : this->E) {
+        pair<set<int>,int> pair;
+        pair.first = set1;
+        pair.second = letter;
+        set<int> delta = calculateDelta(pair);
+        if(!delta.empty() && CollectionsOperators::contained(set2, delta))
+            ret.insert(letter);
+    }
+    return ret;
+}
+
+
 
 

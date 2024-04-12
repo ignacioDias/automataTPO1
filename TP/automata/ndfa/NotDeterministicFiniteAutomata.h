@@ -19,20 +19,19 @@ private:
 
 public:
     NotDeterministicFiniteAutomata();
-    set<int> getK();
-    set<int> getE();
+    set<int> getSates();
+    set<int> getAlphabet();
     int getInitialState();
-    set<int> getF();
+    set<int> getFinalSates();
     void addState(int state);
     void addSymbolToAlphabet(int state);
-    void setK(set<int> states);
-    void setE(set<int> alphabet);
+    void setStates(set<int> states);
+    void setAlphabet(set<int> alphabet);
     void setInitialState(int q);
-    void setF(set<int> final);
+    void setFinalState(set<int> final);
     void addFinalState(int state);
     void addPath(int node, int arc, int destination);
     set<int> calculateDelta(pair<int,int> key);
-    bool repOk();
     DeterministicFiniteAutomata nfaToDfa();
     set<int> calculateWaysToGo(int from, int destination);
 
@@ -40,6 +39,6 @@ private:
     set<int> getSymbolClosure(const set<int>& Q);
     set<int> move(const set<int>& Q, int a);
     set<set<int>> calculateFinal(const set<set<int>>& k);
-    void calculateNewK(set<set<int>>& newK, DeterministicFiniteAutomata dfa);
+    void calculateNewK(DeterministicFiniteAutomata dfa);
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

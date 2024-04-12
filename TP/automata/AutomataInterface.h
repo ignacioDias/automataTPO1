@@ -13,9 +13,10 @@ private:
 public:
     void setE(const std::vector<int>& E);
     void setK(const std::vector<int>& K);
+
     void setInitialState(int q0);
     void setF(const std::vector<int>& F) ;
-    bool repOk();
+
     void addPath(int node, int arc, int destination) ;
 };
 

@@ -10,28 +10,28 @@ using namespace std;
 
 NotDeterministicFiniteAutomata :: NotDeterministicFiniteAutomata() : K(), E(), d(), q0(0), F() {
 }
-set<int> NotDeterministicFiniteAutomata :: getK() {
+set<int> NotDeterministicFiniteAutomata :: getSates() {
     return K;
 }
-set<int> NotDeterministicFiniteAutomata :: getE() {
+set<int> NotDeterministicFiniteAutomata :: getAlphabet() {
     return E;
 }
 int NotDeterministicFiniteAutomata :: getInitialState() {
     return q0;
 }
-set<int> NotDeterministicFiniteAutomata :: getF() {
+set<int> NotDeterministicFiniteAutomata :: getFinalSates() {
     return F;
 }
-void NotDeterministicFiniteAutomata :: setK(set<int> states) {
+void NotDeterministicFiniteAutomata :: setStates(set<int> states) {
     this->K = std::move(states);
 }
-void NotDeterministicFiniteAutomata :: setE(set<int> alphabet) {
+void NotDeterministicFiniteAutomata :: setAlphabet(set<int> alphabet) {
     this->E = std::move(alphabet);
 }
 void NotDeterministicFiniteAutomata :: setInitialState(int q) {
     this->q0 = q;
 }
-void NotDeterministicFiniteAutomata :: setF(set<int> final) {
+void NotDeterministicFiniteAutomata::setFinalState(set<int> final) {
     this->F = std::move(final);
 }
 void NotDeterministicFiniteAutomata :: addState(int state) {
@@ -54,10 +54,7 @@ set<int> NotDeterministicFiniteAutomata :: calculateDelta(pair<int,int> key) {
         return {};
     return d[key];
 }
-bool NotDeterministicFiniteAutomata :: repOk() {
-    bool invariant = CollectionsOperators::contained(this->F, this->K);
-    return invariant &= CollectionsOperators::belongs(this->q0, this->K);
-}
+
 set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int destination) {
     set<int> ret;
     for(int letter : this->E) {
@@ -79,23 +76,24 @@ DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     set<set<int>> newK;
     newK.insert(Q0);
 
-    convertedAutomata.setE(getE());
+    convertedAutomata.setAlphabet(getAlphabet());
 
-    calculateNewK(newK, convertedAutomata);
-    convertedAutomata.setK(newK);
-    convertedAutomata.setF(calculateFinal(newK));
+    convertedAutomata.setStates(newK);
+    calculateNewK(convertedAutomata);
+    convertedAutomata.setFinalStates(calculateFinal(newK));
     return convertedAutomata;
 }
-void NotDeterministicFiniteAutomata :: calculateNewK(set<set<int>>& newK, DeterministicFiniteAutomata dfa) {
-    set<set<int>> unvisitedNodes = newK;
+void NotDeterministicFiniteAutomata :: calculateNewK(DeterministicFiniteAutomata dfa) {
+    set<set<int>> unvisitedNodes = dfa.getStates();
     while(!unvisitedNodes.empty()) {
         auto currentNode = *unvisitedNodes.begin();
-        for (auto currentNumber: getE()) {
+        for (auto currentNumber: getAlphabet()) {
             set<int> currentSet = move(currentNode, currentNumber);
             currentSet = getSymbolClosure(currentSet);
-            if (newK.count(currentSet) <= 0) {
-                newK.insert(currentSet);
+            if (dfa.getStates().count(currentSet) <= 0) {
+                dfa.insertSate(currentSet);
                 unvisitedNodes.insert(currentSet);
+                printf("Llegó al if\n");
                 dfa.addPath(currentNode, currentNumber, currentSet);
             }
         }
@@ -133,11 +131,12 @@ set<int> NotDeterministicFiniteAutomata :: move(const set<int>& Q, int a) {
     }
     return ret;
 }
+
 set<set<int>> NotDeterministicFiniteAutomata :: calculateFinal(const set<set<int>>& k) {
     set<set<int>> newF;
     for(const auto& currentSet : k) {
         for(auto currentNumber : currentSet) {
-            if(getF().count(currentNumber) > 0) {
+            if(getFinalSates().count(currentNumber) > 0) {
                 newF.insert(currentSet);
                 break;
             }

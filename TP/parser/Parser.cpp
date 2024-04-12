@@ -115,8 +115,8 @@ string Parser::toStringSet(const set<int>& set) {
     return ret;
 }
 void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret) {
-    for(const auto& set1 : dfa.getK()) {
-        for(const auto& set2 : dfa.getK()) {
+    for(const auto& set1 : dfa.getStates()) {
+        for(const auto& set2 : dfa.getStates()) {
             set<int> label = dfa.calculateWaysToGo(set1, set2);
             if(!label.empty()) {
                 printf("dasdasd\n");
@@ -130,7 +130,7 @@ void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret
     }
 }
 void Parser :: toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& ret) {
-    for(set<int> finalState : dfa.getF())
+    for(set<int> finalState : dfa.getFinalStates())
         ret += toStringSet(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();
 }
@@ -144,8 +144,8 @@ string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
     return ret;
 }
 void Parser::toStringStatesNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
-    for(int number : ndfa.getK()) {
-        for(int number2 : ndfa.getK()) {
+    for(int number : ndfa.getSates()) {
+        for(int number2 : ndfa.getSates()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
                 ret += to_string(number) + " -> " + to_string(number2) + " [label = \"";
@@ -158,7 +158,7 @@ void Parser::toStringStatesNDFA(NotDeterministicFiniteAutomata ndfa, string& ret
     }
 }
 void Parser :: toStringFinalStateNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
-    for(int finalState : ndfa.getF())
+    for(int finalState : ndfa.getFinalSates())
         ret += to_string(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();
 }

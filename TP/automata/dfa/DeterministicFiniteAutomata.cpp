@@ -8,42 +8,45 @@ using namespace std;
 
 DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0(), F() {
 }
-void DeterministicFiniteAutomata::setE(set<int> alphabet) {
+void DeterministicFiniteAutomata::setAlphabet(set<int> alphabet) {
     this->E = std::move(alphabet);
 }
-set<int> DeterministicFiniteAutomata::getE() {
+set<int> DeterministicFiniteAutomata::getAlphabet() {
     return this->E;
 }
-void DeterministicFiniteAutomata :: setK(set<set<int>> states) {
+void DeterministicFiniteAutomata :: setStates(set<set<int>> states) {
     this->K = std::move(states);
 }
-set<set<int>> DeterministicFiniteAutomata :: getK() {
+set<set<int>> DeterministicFiniteAutomata :: getStates() {
     return this->K;
 }
+void DeterministicFiniteAutomata :: insertSate(const set<int>& state) {
+    this->K.insert(state);
+}
+
 void DeterministicFiniteAutomata :: setInitialState(set<int> q) {
-    this->q0 = q;
+    this->q0 = std::move(q);
+    this->K.insert(getInitialState());
 }
 set<int> DeterministicFiniteAutomata :: getInitialState() {
     return this->q0;
 }
-void DeterministicFiniteAutomata :: setF(set<set<int>> final) {
+void DeterministicFiniteAutomata :: setFinalStates(set<set<int>> final) {
     this->F = final;
 }
-set<set<int>> DeterministicFiniteAutomata :: getF() {
+set<set<int>> DeterministicFiniteAutomata :: getFinalStates() {
     return this->F;
 }
 set<int> DeterministicFiniteAutomata :: calculateDelta(const pair<set<int>,int>& key) {
     return d[key];
 }
-void DeterministicFiniteAutomata :: addPath(set<int> node, int arc, set<int> destination) {
-    pair<set<int>,int> path;
-    path.first = std::move(node);
-    path.second = arc;
-    auto it = d.find(path);
-    if (it == d.end())
+void DeterministicFiniteAutomata :: addPath(const set<int>& node, int arc, set<int> destination) {
+    printf("Llegó al addPath\n");
+    pair<set<int>,int> path = make_pair(node, arc);
+    if(d.count(path) == 0) {
         d[path] = std::move(destination);
-    else
-        throw runtime_error("El nodo ya tiene asignado un destino con dicho arco");
+        printf("Llegó al if del addPath\n");
+    }
 }
 bool DeterministicFiniteAutomata :: repOk() {
     bool invariant = true;
@@ -53,7 +56,24 @@ bool DeterministicFiniteAutomata :: repOk() {
     }
     return invariant;
 }
-bool DeterministicFiniteAutomata :: belongs(const string& numbers) {
+set<int> DeterministicFiniteAutomata::calculateWaysToGo(const set<int>& set1, const set<int>& set2) {
+    set<int> ret;
+    for (int letter : this->E) {
+        set<int> delta = calculateDelta(make_pair(set1, letter));
+        if (!delta.empty() && CollectionsOperators::contained(set2, delta)) //{2,3} {2,3,4}
+            ret.insert(letter);
+    }
+    return ret;
+}
+bool DeterministicFiniteAutomata :: isFinalNode(const set<int>& node) {
+    for(const auto& currentNode : getFinalStates()) {
+        if(currentNode == node)
+            return true;
+    }
+    return false;
+}
+
+bool DeterministicFiniteAutomata :: checkValidString(const string& numbers) {
     set<int> currentNode = q0;
     for(char ch : numbers) {
         pair<set<int>, int> key;
@@ -64,23 +84,6 @@ bool DeterministicFiniteAutomata :: belongs(const string& numbers) {
         currentNode = calculateDelta(key);
     }
     return isFinalNode(currentNode);
-}
-bool DeterministicFiniteAutomata :: isFinalNode(const set<int>& node) {
-    for(const auto& currentNode : getF()) {
-        if(currentNode == node)
-            return true;
-    }
-    return false;
-}
-
-set<int> DeterministicFiniteAutomata::calculateWaysToGo(const set<int>& set1, const set<int>& set2) {
-    set<int> ret;
-    for (int letter : this->E) {
-        set<int> delta = calculateDelta(make_pair(set1, letter));
-        if (!delta.empty() && CollectionsOperators::contained(set2, delta))
-            ret.insert(letter);
-    }
-    return ret;
 }
 
 

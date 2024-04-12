@@ -20,12 +20,11 @@ bool CollectionsOperators :: belongs(int elem, const set<int>& set) {
     return false;
 }
 bool CollectionsOperators :: setContained(const set<set<int>>& firstSet, const set<int>& biggerSet) {
-    bool ret = true;
     for(const auto& currentSet : firstSet) {
-        if(!contained(currentSet,biggerSet))
-            return false;
+        if(currentSet == biggerSet || contained(currentSet, biggerSet))
+            return true;
     }
-    return true;
+    return false;
 }
 void CollectionsOperators :: insertAll(set<int>& setToBeModify, const set<int>& otherSet) {
     for(auto elem : otherSet) {

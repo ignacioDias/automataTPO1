@@ -18,6 +18,7 @@ public:
     void convertFromNDFA();
     DeterministicFiniteAutomata getDFA();
 private:
+    set<int> calculateDelta(const set<int>& state, int symbol);
     set<int> getSymbolClosure(const set<int>& Q);
     set<int> move(const set<int>& Q, int a);
     set<set<int>> calculateFinal(const set<set<int>>& k);

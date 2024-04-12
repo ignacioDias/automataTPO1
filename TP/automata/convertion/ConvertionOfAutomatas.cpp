@@ -19,30 +19,41 @@ void ConvertionOfAutomatas :: convertFromNDFA() {
     q0AsSet.insert(ndfa.getInitialState());
     set<int> Q0 = getSymbolClosure(q0AsSet);
     dfa.setInitialState(Q0);
-    set<set<int>> newK;
-    newK.insert(Q0);
 
     dfa.setAlphabet(ndfa.getAlphabet());
 
-    dfa.setStates(newK);
+    dfa.setStates({Q0});
     calculateNewK();
     dfa.setFinalStates(calculateFinal(dfa.getStates()));
 }
 void ConvertionOfAutomatas::calculateNewK() {
-    set<set<int>> unvisitedNodes = dfa.getStates();
+    set<set<int>> unvisitedNodes;
+    unvisitedNodes.insert(dfa.getInitialState());
     while(!unvisitedNodes.empty()) {
-        auto currentNode = *unvisitedNodes.begin();
-        for (auto currentNumber : ndfa.getAlphabet()) {
-            set<int> currentSet = move(currentNode, currentNumber);
-            currentSet = getSymbolClosure(currentSet);
-            if (dfa.getStates().count(currentSet) <= 0) {
-                dfa.insertSate(currentSet);
-                unvisitedNodes.insert(currentSet);
-                dfa.addPath(currentNode, currentNumber, currentSet);
-            }
-        }
+        set<int> currentNode = *unvisitedNodes.begin();
         unvisitedNodes.erase(currentNode);
+        for(auto letter : ndfa.getAlphabet()) {
+            set<int> destination = getSymbolClosure(move(currentNode, letter));
+            if(unvisitedNodes.count(destination) <= 0) {
+                unvisitedNodes.insert(destination);
+            }
+            dfa.insertSate(currentNode);
+            dfa.addPath(currentNode, letter, destination);
+        }
     }
+//    while(!unvisitedNodes.empty()) {
+//        auto currentNode = *unvisitedNodes.begin();
+//        for (auto currentNumber : ndfa.getAlphabet()) {
+//            set<int> currentSet = move(currentNode, currentNumber);
+//            currentSet = getSymbolClosure(currentSet);
+//            if (dfa.getStates().count(currentSet) <= 0) {
+//                dfa.insertSate(currentSet);
+//                unvisitedNodes.insert(currentSet);
+//                dfa.addPath(currentNode, currentNumber, currentSet);
+//            }
+//        }
+//        unvisitedNodes.erase(currentNode);
+//    }
 }
 set<int> ConvertionOfAutomatas::getSymbolClosure(const set<int>& Q) {
     set<int> result;

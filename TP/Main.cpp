@@ -36,16 +36,19 @@ int main() {
 
     NotDeterministicFiniteAutomata ndfa; 
     ndfa.setInitialState(10);
-    ndfa.setAlphabet({-1, 1, 2}); //a, b
-    ndfa.setStates({10, 11, 12, 13});
+    ndfa.setStates({10,11,12,13,14,15});
+    ndfa.setAlphabet({-1,1,2,3});
     ndfa.addPath(10,1,11);
-    ndfa.addPath(11,2,11);
-    ndfa.addPath(11,2,12);
-    ndfa.addPath(11,1,13);
-    ndfa.addPath(13,1,13);
-    ndfa.addPath(13,2,13);
-    ndfa.addFinalState(12);
-//    cout << Parser::ndfaToString(ndfa);
+    ndfa.addPath(11,3,12);
+    ndfa.addPath(12,-1,15);
+    ndfa.addPath(15,-1,10);
+    ndfa.addPath(10,-1,13);
+    ndfa.addPath(13,2,14);
+    ndfa.addPath(13,2,15);
+    ndfa.addPath(14,2,14);
+    ndfa.addPath(14,2,15);
+    ndfa.setFinalState({4,5});
+    //    cout << Parser::ndfaToString(ndfa);
     ConvertionOfAutomatas convertor;
     convertor.setNDFA(ndfa);
     convertor.convertFromNDFA();

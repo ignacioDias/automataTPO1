@@ -2,6 +2,7 @@
 #include "automata/dfa/DeterministicFiniteAutomata.h"
 #include "automata/ndfa/NotDeterministicFiniteAutomata.h"
 #include "parser/Parser.h"
+#include "automata/convertion/ConvertionOfAutomatas.h"
 using namespace std;
 
 int main() {
@@ -45,7 +46,9 @@ int main() {
     ndfa.addPath(13,2,13);
     ndfa.addFinalState(12);
 //    cout << Parser::ndfaToString(ndfa);
-    DeterministicFiniteAutomata dfa = ndfa.nfaToDfa();
-    cout << Parser::dfaToString(dfa);
-    return 0;
+    ConvertionOfAutomatas convertor;
+    convertor.setNDFA(ndfa);
+    convertor.convertFromNDFA();
+    cout << Parser::dfaToString(convertor.getDFA());
+return 0;
 }

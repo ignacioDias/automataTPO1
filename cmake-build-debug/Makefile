@@ -153,6 +153,30 @@ TP/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.s
 .PHONY : TP/Main.cpp.s
 
+TP/automata/convertion/ConvertionOfAutomatas.o: TP/automata/convertion/ConvertionOfAutomatas.cpp.o
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.o
+
+# target to build an object file
+TP/automata/convertion/ConvertionOfAutomatas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.cpp.o
+
+TP/automata/convertion/ConvertionOfAutomatas.i: TP/automata/convertion/ConvertionOfAutomatas.cpp.i
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.i
+
+# target to preprocess a source file
+TP/automata/convertion/ConvertionOfAutomatas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.i
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.cpp.i
+
+TP/automata/convertion/ConvertionOfAutomatas.s: TP/automata/convertion/ConvertionOfAutomatas.cpp.s
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.s
+
+# target to generate assembly for a file
+TP/automata/convertion/ConvertionOfAutomatas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.s
+.PHONY : TP/automata/convertion/ConvertionOfAutomatas.cpp.s
+
 TP/automata/dfa/DeterministicFiniteAutomata.o: TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
 .PHONY : TP/automata/dfa/DeterministicFiniteAutomata.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... TP/Main.o"
 	@echo "... TP/Main.i"
 	@echo "... TP/Main.s"
+	@echo "... TP/automata/convertion/ConvertionOfAutomatas.o"
+	@echo "... TP/automata/convertion/ConvertionOfAutomatas.i"
+	@echo "... TP/automata/convertion/ConvertionOfAutomatas.s"
 	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.o"
 	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.i"
 	@echo "... TP/automata/dfa/DeterministicFiniteAutomata.s"

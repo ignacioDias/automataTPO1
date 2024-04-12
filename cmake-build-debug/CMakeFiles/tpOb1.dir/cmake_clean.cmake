@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tpOb1.dir/TP/Main.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/Main.cpp.o.d"
+  "CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o"
+  "CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o"

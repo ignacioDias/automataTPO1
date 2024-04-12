@@ -13,4 +13,6 @@ add_executable(tpOb1
         TP/auxiliarmethods/CollectionsOperators.cpp
         TP/Main.cpp
         TP/parser/Parser.h
-        TP/parser/Parser.cpp)
+        TP/parser/Parser.cpp
+        TP/automata/convertion/ConvertionOfAutomatas.h
+        TP/automata/convertion/ConvertionOfAutomatas.cpp)

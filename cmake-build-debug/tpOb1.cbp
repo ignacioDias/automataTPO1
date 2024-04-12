@@ -88,6 +88,12 @@
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/AutomataInterface.h">
 			<Option target="tpOb1"/>
 		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.h">
+			<Option target="tpOb1"/>
+		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.cpp">
 			<Option target="tpOb1"/>
 		</Unit>

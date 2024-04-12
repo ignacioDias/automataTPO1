@@ -101,25 +101,22 @@ void Parser::fileManagement(const string& line) {
 }
 string Parser::dfaToString(DeterministicFiniteAutomata dfa) {
     string ret = "digraph{\ninic[shape=point];\ninic->";
-    ret += "{\"" + toStringSet(dfa.getInitialState()) + "\"};\n";
+    ret += "{\"" + CollectionsOperators::to_string_set(dfa.getInitialState()) + "\"};\n";
     toStringStatesDFA(dfa, ret);
     toStringFinalStateDFA(dfa, ret);
     ret += "\n}";
     return ret;
 }
-string Parser::toStringSet(const set<int>& set) {
-    string ret;
-    for(auto elem : set)
-        ret += to_string(elem) + ",";
-    ret.pop_back();
-    return ret;
-}
-void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret) {
+void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, string &ret) {
     for(const auto& set1 : dfa.getStates()) {
+        if(set1.empty())
+            continue;
         for(const auto& set2 : dfa.getStates()) {
+            if(set2.empty())
+                continue;
             set<int> label = dfa.calculateWaysToGo(set1, set2);
             if(!label.empty()) {
-                ret += toStringSet(set1) + " -> " + toStringSet(set2) + " [label = \"";
+                ret += "\"" + CollectionsOperators::to_string_set(set1) + "\" -> \"" + CollectionsOperators::to_string_set(set2) + "\" [label = \"";
                 for(auto elem : label)
                     ret += to_string(elem) + ",";
                 ret.pop_back();
@@ -129,11 +126,9 @@ void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret
     }
 }
 void Parser :: toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& ret) {
-    for(set<int> finalState : dfa.getFinalStates())
-        ret += toStringSet(finalState) + "[shape=doublecircle];\n";
-    ret.pop_back();
+        ret += "\"" + CollectionsOperators::to_string_set_of_sets(dfa.getFinalStates()) + "\" [shape=doublecircle];\n";
+        ret.pop_back();
 }
-
 string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
     string ret = "digraph{\ninic[shape=point];\ninic -> ";
     ret += to_string(ndfa.getInitialState()) + ";\n";

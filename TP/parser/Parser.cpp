@@ -119,7 +119,6 @@ void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, std::string &ret
         for(const auto& set2 : dfa.getStates()) {
             set<int> label = dfa.calculateWaysToGo(set1, set2);
             if(!label.empty()) {
-                printf("dasdasd\n");
                 ret += toStringSet(set1) + " -> " + toStringSet(set2) + " [label = \"";
                 for(auto elem : label)
                     ret += to_string(elem) + ",";

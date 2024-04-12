@@ -83,7 +83,7 @@ DeterministicFiniteAutomata NotDeterministicFiniteAutomata :: nfaToDfa() {
     convertedAutomata.setFinalStates(calculateFinal(newK));
     return convertedAutomata;
 }
-void NotDeterministicFiniteAutomata :: calculateNewK(DeterministicFiniteAutomata dfa) {
+void NotDeterministicFiniteAutomata :: calculateNewK(DeterministicFiniteAutomata& dfa) {
     set<set<int>> unvisitedNodes = dfa.getStates();
     while(!unvisitedNodes.empty()) {
         auto currentNode = *unvisitedNodes.begin();
@@ -93,7 +93,6 @@ void NotDeterministicFiniteAutomata :: calculateNewK(DeterministicFiniteAutomata
             if (dfa.getStates().count(currentSet) <= 0) {
                 dfa.insertSate(currentSet);
                 unvisitedNodes.insert(currentSet);
-                printf("Llegó al if\n");
                 dfa.addPath(currentNode, currentNumber, currentSet);
             }
         }

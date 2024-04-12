@@ -48,4 +48,4 @@ int main() {
     DeterministicFiniteAutomata dfa = ndfa.nfaToDfa();
     cout << Parser::dfaToString(dfa);
     return 0;
-} 
+}

@@ -32,3 +32,15 @@ void CollectionsOperators :: insertAll(set<int>& setToBeModify, const set<int>& 
     }
 }
 
+string CollectionsOperators::to_string_set(const set<int>& set) {
+    string ret;
+    for(auto elem : set)
+        ret += std::to_string(elem) +", ";
+    return ret + "\n";
+}
+string CollectionsOperators::to_string_set_of_sets(const set<set<int>>& setOfSets) {
+    string ret;
+    for(const auto& elem : setOfSets)
+        ret += to_string_set(elem);
+    return ret;
+}

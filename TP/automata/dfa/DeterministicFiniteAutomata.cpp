@@ -41,12 +41,9 @@ set<int> DeterministicFiniteAutomata :: calculateDelta(const pair<set<int>,int>&
     return d[key];
 }
 void DeterministicFiniteAutomata :: addPath(const set<int>& node, int arc, set<int> destination) {
-    printf("Llegó al addPath\n");
     pair<set<int>,int> path = make_pair(node, arc);
-    if(d.count(path) == 0) {
+    if(d.count(path) == 0)
         d[path] = std::move(destination);
-        printf("Llegó al if del addPath\n");
-    }
 }
 bool DeterministicFiniteAutomata :: repOk() {
     bool invariant = true;

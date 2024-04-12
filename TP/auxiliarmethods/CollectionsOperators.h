@@ -11,6 +11,8 @@ public:
     static bool belongs(int elem, const set<int>& set);
     static bool setContained(const set<set<int>>& firstSet, const set<int>& biggerSet);
     static void insertAll(set<int>& setToBeModify, const set<int>& otherSet);
+    static string to_string_set(const set<int>& set);
+    static string to_string_set_of_sets(const set<set<int>>& setOfSets);
     };
 
 #endif //TPOB1_COLLECTIONSOPERATORS_H

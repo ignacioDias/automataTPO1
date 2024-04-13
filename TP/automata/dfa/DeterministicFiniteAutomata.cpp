@@ -2,7 +2,6 @@
 
 #include <utility>
 #include "DeterministicFiniteAutomata.h"
-#include "../AutomataInterface.h"
 #include "../../auxiliarmethods/CollectionsOperators.h"
 using namespace std;
 

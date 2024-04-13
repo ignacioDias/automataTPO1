@@ -1,33 +1,21 @@
-#include <bits/stdc++.h>
-#include "../automata/dfa/DeterministicFiniteAutomata.h"
-#include "../automata/ndfa/NotDeterministicFiniteAutomata.h"
+#include <iostream>
+#include <vector>
+#include <string>
 #include "../parser/Parser.h"
-using namespace std;
-
-const string filename = "TP/testing/output.txt";
 
 int main() {
-    ifstream file(filename);     // Abrir el archivo
-    Parser parser = *new Parser();
-
-    if (!file.is_open()) {     // Verificar si el archivo se abrió correctamente
-        cerr << "No se pudo abrir el archivo." << endl;
-        return -1;
+    std::string line1 = "10 -> 11 [label = \"1\"];"; 
+    std::string line2 = "13 -> 13 [label = \"1,2\"];";
+    std::string line3 = "20 -> 10 [label = \"1,_\"]";
+    std::vector<std::string> lines = {line1, line2, line3}; // Usando vector en lugar de array
+    Parser parser; 
+    for(std::string s : lines){
+        if(parser.validateTransitionLine(s)){
+            std::cout << "Valida"; 
+            parser.addAutomataInformationFromTransitionLine(s); 
+        } else {
+            std::cout << "Invalida"; 
+        }
     }
-
-    string line;
-
-    if (!getline(file, line)) { // Leer la primera línea
-        cerr << "No se pudo leer la primera línea." << endl;
-        return -1;
-    }
-    if(!Parser::validateTransitionLine(line)){
-        cerr << "Formato invalido del archivo." << endl;
-        return -1;
-    }
-
-    file.close();
-
-    //NotDeterministicFiniteAutomata nda = parser.getNDA(); 
-    //nda.show(); //TODO: IMPLEMENTAR 
+    return 0; // Asegúrate de devolver 0 al finalizar main
 }

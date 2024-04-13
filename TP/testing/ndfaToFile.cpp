@@ -9,8 +9,8 @@ int main() {
 
     NotDeterministicFiniteAutomata ndfa; 
     ndfa.setInitialState(10);
-    ndfa.setE({1,2}); //a, b
-    ndfa.setK({10,11,12,13});
+    ndfa.setAlphabet({1,2}); //a, b
+    ndfa.setStates({10,11,12,13});
     ndfa.addPath(10,1,11);
     ndfa.addPath(11,2,11);
     ndfa.addPath(11,2,12);

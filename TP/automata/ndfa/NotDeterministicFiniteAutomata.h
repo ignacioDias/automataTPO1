@@ -3,13 +3,11 @@
 
 #include <bits/stdc++.h>
 #include "../dfa/DeterministicFiniteAutomata.h"
-#include "../AutomataInterface.h"
 #include "../../auxiliarmethods/CollectionsOperators.h"
 
 using namespace std;
 
-
-class NotDeterministicFiniteAutomata : public AutomataInterface {
+class NotDeterministicFiniteAutomata {
 private:
     set<int> K;
     set<int> E;

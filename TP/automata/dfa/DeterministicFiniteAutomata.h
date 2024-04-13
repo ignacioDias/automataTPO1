@@ -2,8 +2,6 @@
 #define TPOB1_DETERMINISTICFINITEAUTOMATA_H
 #pragma once
 #include <bits/stdc++.h>
-#include "../AutomataInterface.h"
-
 using namespace std;
 
 class DeterministicFiniteAutomata {

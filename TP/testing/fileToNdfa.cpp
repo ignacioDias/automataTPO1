@@ -32,6 +32,6 @@ int main() {
 
     file.close();
 
-    //NotDeterministicFiniteAutomata nda = parser.getNDA(); 
-    //nda.show(); //TODO: IMPLEMENTAR 
+    NotDeterministicFiniteAutomata nda = parser.getNDA(); 
+    cout << parser.ndfaToString(nda); 
 }

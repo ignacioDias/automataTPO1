@@ -4,7 +4,6 @@
 #include "../dfa/DeterministicFiniteAutomata.h"
 #include "../../auxiliarmethods/CollectionsOperators.h"
 #include "NotDeterministicFiniteAutomata.h"
-#include "../AutomataInterface.h"
 #define LAMBDA -1
 using namespace std;
 

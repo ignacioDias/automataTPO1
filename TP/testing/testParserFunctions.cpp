@@ -21,13 +21,9 @@ int main() {
         cerr << "No se pudo leer la primera línea." << endl;
         return -1;
     }
-    if(!Parser::validateFirstLine(line)){
+    if(!Parser::validateTransitionLine(line)){
         cerr << "Formato invalido del archivo." << endl;
         return -1;
-    }
-
-    while (getline(file, line)) {
-        parser.fileManagement(line);
     }
 
     file.close();

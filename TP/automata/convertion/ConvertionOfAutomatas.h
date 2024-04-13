@@ -17,12 +17,12 @@ public:
     void setDFA(DeterministicFiniteAutomata dfa);
     void convertFromNDFA();
     DeterministicFiniteAutomata getDFA();
-private:
     set<int> calculateDelta(const set<int>& state, int symbol);
-    set<int> getSymbolClosure(const set<int>& Q);
-    set<int> move(const set<int>& Q, int a);
+    set<int> getLambdaClosure(const set<int>& Q);
+    set<int> getLambdaReachableStates(int state);
+    set<int> move(set<int> states, int symbol);
     set<set<int>> calculateFinal(const set<set<int>>& k);
-    void calculateNewK();
+    void showStates(set<set<int>> states);
 };
 
 

@@ -8,7 +8,7 @@ int main() {
     string filename = "TP/testing/output.txt"; 
 
     NotDeterministicFiniteAutomata ndfa; 
-    ndfa.setInitialState(0);
+    ndfa.setInitialState(10);
     ndfa.setE({1,2}); //a, b
     ndfa.setK({10,11,12,13});
     ndfa.addPath(10,1,11);

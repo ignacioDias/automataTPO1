@@ -3,6 +3,7 @@
 //
 #define LAMBDA -1
 #include "ConvertionOfAutomatas.h"
+
 ConvertionOfAutomatas :: ConvertionOfAutomatas() : ndfa(), dfa(){
 }
 void ConvertionOfAutomatas :: setNDFA(NotDeterministicFiniteAutomata ndfa) {
@@ -15,57 +16,49 @@ DeterministicFiniteAutomata ConvertionOfAutomatas :: getDFA() {
     return dfa;
 }
 void ConvertionOfAutomatas :: convertFromNDFA() {
-    set<int> q0AsSet;
-    q0AsSet.insert(ndfa.getInitialState());
-    set<int> Q0 = getSymbolClosure(q0AsSet);
-    dfa.setInitialState(Q0);
+    using dfaState = set<int>;
+    using ndfaState = int; 
 
+    dfaState newInitialState = getLambdaClosure({ndfa.getInitialState()});
+    dfa.setInitialState(newInitialState);
     dfa.setAlphabet(ndfa.getAlphabet());
 
-    dfa.setStates({Q0});
-    calculateNewK();
-    dfa.setFinalStates(calculateFinal(dfa.getStates()));
-}
-void ConvertionOfAutomatas::calculateNewK() {
-    set<set<int>> unvisitedNodes;
-    unvisitedNodes.insert(dfa.getInitialState());
-    while(!unvisitedNodes.empty()) {
-        set<int> currentNode = *unvisitedNodes.begin();
-        unvisitedNodes.erase(currentNode);
-        for(auto letter : ndfa.getAlphabet()) {
-            set<int> destination = getSymbolClosure(move(currentNode, letter));
-            if(unvisitedNodes.count(destination) <= 0) {
-                unvisitedNodes.insert(destination);
+    set<dfaState> unmarkedStates;
+    set<dfaState> dfaStates;  
+
+    unmarkedStates.insert(newInitialState);
+    dfaStates.insert(newInitialState);  
+    while(!unmarkedStates.empty()){
+        for(auto it = unmarkedStates.begin(); it != unmarkedStates.end();) {
+            dfaState S = *it; //evita segmentation fault 
+            it = unmarkedStates.erase(it);
+            for(int symbol: ndfa.getAlphabet()){
+                dfaState M = getLambdaClosure(move(S, symbol));
+                //if M not in T
+                if(dfaStates.find(M) == dfaStates.end()){
+                    unmarkedStates.insert(M); 
+                    dfaStates.insert(M); 
+                }
+                dfa.addPath(S,symbol,M); 
             }
-            dfa.insertSate(currentNode);
-            dfa.addPath(currentNode, letter, destination);
         }
     }
-//    while(!unvisitedNodes.empty()) {
-//        auto currentNode = *unvisitedNodes.begin();
-//        for (auto currentNumber : ndfa.getAlphabet()) {
-//            set<int> currentSet = move(currentNode, currentNumber);
-//            currentSet = getSymbolClosure(currentSet);
-//            if (dfa.getStates().count(currentSet) <= 0) {
-//                dfa.insertSate(currentSet);
-//                unvisitedNodes.insert(currentSet);
-//                dfa.addPath(currentNode, currentNumber, currentSet);
-//            }
-//        }
-//        unvisitedNodes.erase(currentNode);
-//    }
+    dfa.setStates(dfaStates); 
+    dfa.setFinalStates(calculateFinal(dfa.getStates()));
 }
-set<int> ConvertionOfAutomatas::getSymbolClosure(const set<int>& Q) {
-    set<int> result;
-    set<int> visited_states;
-    set<int> unvisited_states = Q;
+
+set<int> ConvertionOfAutomatas::getLambdaClosure(const set<int>& Q) {
+    using state = int;
+    set<state> result;
+    set<state> visited_states;
+    set<state> unvisited_states = Q;
+    
     while (!unvisited_states.empty()) {
         int curr_state = *unvisited_states.begin();
         unvisited_states.erase(curr_state);
         visited_states.insert(curr_state);
-        set<int> reachable_states = ndfa.calculateDelta({curr_state, LAMBDA});
-        if(reachable_states.empty())
-            result.insert(curr_state);
+        set<int> reachable_states = getLambdaReachableStates(curr_state);
+        result.insert(curr_state);
         for (int reachable_state : reachable_states) {
             result.insert(reachable_state);
             if (visited_states.find(reachable_state) == visited_states.end())
@@ -74,17 +67,41 @@ set<int> ConvertionOfAutomatas::getSymbolClosure(const set<int>& Q) {
     }
     return result;
 }
-set<int> ConvertionOfAutomatas :: move(const set<int>& Q, int a) {
-    set<int> ret;
-    for(auto elem : Q) {
-        pair<int,int> actualPair;
-        actualPair.first = elem;
-        actualPair.second = a;
-        set<int> actualSet = ndfa.calculateDelta(actualPair);
-        if(!actualSet.empty())
-            CollectionsOperators::insertAll(ret, actualSet);
+
+set<int> ConvertionOfAutomatas::getLambdaReachableStates(int state) {
+    set<int> result;
+    queue<int> to_visit;
+    set<int> visited;
+
+    to_visit.push(state);
+    visited.insert(state);
+
+    while (!to_visit.empty()) {
+        int current_state = to_visit.front();
+        to_visit.pop();
+        set<int> lambda_reachable_states = ndfa.calculateDelta({current_state, LAMBDA});
+        for (int lambda_reachable_state : lambda_reachable_states) {
+            if (visited.find(lambda_reachable_state) == visited.end()) {
+                result.insert(lambda_reachable_state);
+                to_visit.push(lambda_reachable_state);
+                visited.insert(lambda_reachable_state);
+            }
+        }
     }
-    return ret;
+
+    return result;
+}
+
+set<int> ConvertionOfAutomatas :: move(set<int> states, int symbol) {
+    using state = int; 
+    set<state> result;
+    for(state s: states) {
+        set<state> possibleMovements = ndfa.calculateDelta(make_pair(s,symbol));
+        for(state s: possibleMovements){
+            result.insert(s); 
+        }
+    }
+    return result;
 }
 
 set<set<int>> ConvertionOfAutomatas :: calculateFinal(const set<set<int>>& k) {
@@ -98,4 +115,15 @@ set<set<int>> ConvertionOfAutomatas :: calculateFinal(const set<set<int>>& k) {
         }
     }
     return newF;
+}
+
+void showStates(set<set<int>> states){
+    using dfaState = set<int>;
+    using ndfaState = int; 
+    using std::cout; 
+    for(dfaState state: states){
+        for(int substate: state){
+            cout << substate << ' ';
+        }
+    }
 }

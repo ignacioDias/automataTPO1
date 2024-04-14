@@ -56,7 +56,9 @@ set<int> NotDeterministicFiniteAutomata :: calculateDelta(pair<int,int> key) {
 
 set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int destination) {
     set<int> ret;
-    for(int letter : this->E) {
+    set<int> symbols = this->E; 
+    symbols.insert(LAMBDA); 
+    for(int letter : symbols) {
         pair<int,int> pair;
         pair.first = from;
         pair.second = letter;

@@ -128,21 +128,25 @@ void Parser :: toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& re
         ret.pop_back();
 }
 string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
-    string ret = "digraph{\ninic[shape=point];\ninic -> ";
+    string ret = "digraph{\ninic[shape=point];inic -> ";
     ret += to_string(ndfa.getInitialState()) + ";\n";
-    toStringStatesNDFA(ndfa, ret);
+    NDFATransitionsToString(ndfa, ret);
     toStringFinalStateNDFA(ndfa, ret);
     ret += "\n}";
     return ret;
 }
-void Parser::toStringStatesNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
+void Parser::NDFATransitionsToString(NotDeterministicFiniteAutomata ndfa, string& ret) {
+    const int LAMBDA = -1; 
     for(int number : ndfa.getSates()) {
         for(int number2 : ndfa.getSates()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
                 ret += to_string(number) + " -> " + to_string(number2) + " [label = \"";
-                for(auto elem : label)
-                    ret += to_string(elem) + ",";
+                for(int elem : label){
+                    if(elem == LAMBDA){
+                        ret += ("_,"); 
+                    } else ret += to_string(elem) + ",";
+                }     
                 ret.pop_back();
                 ret += "\"];\n";
             }

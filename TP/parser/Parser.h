@@ -31,7 +31,7 @@ private:
     static bool checkDelta(const string& line);
     NotDeterministicFiniteAutomata nda; 
     bool readLastLine;
-    static void toStringStatesNDFA(NotDeterministicFiniteAutomata ndfa, string& ret);
+    static void NDFATransitionsToString(NotDeterministicFiniteAutomata ndfa, string& ret);
     static void toStringFinalStateNDFA(NotDeterministicFiniteAutomata ndfa, string& ret);
     static void toStringStatesDFA(DeterministicFiniteAutomata dfa, string& ret);
     static void toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& ret);

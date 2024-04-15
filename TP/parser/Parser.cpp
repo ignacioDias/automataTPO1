@@ -1,8 +1,11 @@
 #include "Parser.h"
 #include <regex> 
+#include <utility>
 #include <bits/stdc++.h>
 #include "../automata/dfa/DeterministicFiniteAutomata.h"
 #include "../automata/ndfa/NotDeterministicFiniteAutomata.h"
+#include "automata-to-string/ndfa/NDFAToString.h"
+#include "automata-to-string/dfa/DFAToString.h"
 
 using namespace std;
 
@@ -98,65 +101,11 @@ void Parser::fileManagement(const string& line) {
     else if(!isRankdirLine(line)) throw runtime_error("Linea no reconocida: " + line);
 }
 string Parser::dfaToString(DeterministicFiniteAutomata dfa) {
-    string ret = "digraph{\ninic[shape=point];\ninic->";
-    ret += "{\"" + CollectionsOperators::to_string_set(dfa.getInitialState()) + "\"};\n";
-    toStringStatesDFA(dfa, ret);
-    toStringFinalStateDFA(dfa, ret);
-    ret += "\n}";
-    return ret;
+    return DFAToString::dfaToString(std::move(dfa));
 }
-void Parser::toStringStatesDFA(DeterministicFiniteAutomata dfa, string &ret) {
-    for(const auto& set1 : dfa.getStates()) {
-        if(set1.empty())
-            continue;
-        for(const auto& set2 : dfa.getStates()) {
-            if(set2.empty())
-                continue;
-            set<int> label = dfa.calculateWaysToGo(set1, set2);
-            if(!label.empty()) {
-                ret += "\"" + CollectionsOperators::to_string_set(set1) + "\" -> \"" + CollectionsOperators::to_string_set(set2) + "\" [label = \"";
-                for(auto elem : label)
-                    ret += to_string(elem) + ",";
-                ret.pop_back();
-                ret += "\"];\n";
-            }
-        }
-    }
-}
-void Parser :: toStringFinalStateDFA(DeterministicFiniteAutomata dfa, string& ret) {
-        ret += "\"" + CollectionsOperators::to_string_set_of_sets(dfa.getFinalStates()) + "\" [shape=doublecircle];\n";
-        ret.pop_back();
-}
+
 string Parser::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
-    string ret = "digraph{\ninic[shape=point];inic -> ";
-    ret += to_string(ndfa.getInitialState()) + ";\n";
-    NDFATransitionsToString(ndfa, ret);
-    toStringFinalStateNDFA(ndfa, ret);
-    ret += "\n}";
-    return ret;
-}
-void Parser::NDFATransitionsToString(NotDeterministicFiniteAutomata ndfa, string& ret) {
-    const int LAMBDA = -1; 
-    for(int number : ndfa.getSates()) {
-        for(int number2 : ndfa.getSates()) {
-            set<int> label = ndfa.calculateWaysToGo(number,number2);
-            if(!label.empty()) {
-                ret += to_string(number) + " -> " + to_string(number2) + " [label = \"";
-                for(int elem : label){
-                    if(elem == LAMBDA){
-                        ret += ("_,"); 
-                    } else ret += to_string(elem) + ",";
-                }     
-                ret.pop_back();
-                ret += "\"];\n";
-            }
-        }
-    }
-}
-void Parser :: toStringFinalStateNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
-    for(int finalState : ndfa.getFinalSates())
-        ret += to_string(finalState) + "[shape=doublecircle];\n";
-    ret.pop_back();
+    return NDFAToString::ndfaToString(std::move(ndfa));
 }
 
 void Parser::writeToFile(const string& filename, const string& content){

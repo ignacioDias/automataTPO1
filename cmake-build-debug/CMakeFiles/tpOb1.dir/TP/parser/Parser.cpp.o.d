@@ -307,7 +307,7 @@ CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: \
  /usr/include/c++/11/shared_mutex \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/NotDeterministicFiniteAutomata.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../dfa/DeterministicFiniteAutomata.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../dfa/../AutomataInterface.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../dfa/../../auxiliarmethods/CollectionsOperators.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../AutomataInterface.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../../auxiliarmethods/CollectionsOperators.h
+ /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/../../auxiliarmethods/CollectionsOperators.h \
+ /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.h \
+ /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/../../../automata/ndfa/NotDeterministicFiniteAutomata.h \
+ /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.h

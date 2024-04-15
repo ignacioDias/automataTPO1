@@ -305,10 +305,7 @@ CMakeFiles/tpOb1.dir/TP/Main.cpp.o: \
  /usr/include/c++/11/bits/unordered_set.h \
  /usr/include/c++/11/shared_mutex \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/../AutomataInterface.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/../../auxiliarmethods/CollectionsOperators.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/ndfa/../AutomataInterface.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/ndfa/../../auxiliarmethods/CollectionsOperators.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/../automata/ndfa/NotDeterministicFiniteAutomata.h \

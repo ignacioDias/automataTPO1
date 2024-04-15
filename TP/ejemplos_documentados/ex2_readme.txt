@@ -23,7 +23,7 @@ Ejemplos de cadenas que acepta son:
 COMPILACIÓN 
 ---------------------------------------------
 (1) Para compilar ex1_file_creation.cpp, desde la carpeta del repositorio 
-g++ TP/ejemplos_documentados/ex2_file_creation.cpp  TP/automata/dfa/DeterministicFiniteAutomata.cpp TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp TP/parser/Parser.cpp TP/auxiliarmethods/CollectionsOperators.cpp
+g++ TP/ejemplos_documentados/ex2_file_creation.cpp  TP/automata/dfa/DeterministicFiniteAutomata.cpp TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp TP/parser/Parser.cpp TP/auxiliarmethods/CollectionsOperators.cpp TP/parser/automata-to-string/dfa/DFAToString.cpp TP/parser/automata-to-string/ndfa/NDFAToString.cpp
 
 (2) Para compilar ex2_file_read_and_string_validation.cpp, desde el mismo directorio
-g++ TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp  TP/automata/dfa/DeterministicFiniteAutomata.cpp TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp TP/parser/Parser.cpp TP/auxiliarmethods/CollectionsOperators.cpp TP/automata/convertion/ConvertionOfAutomatas.cpp
+g++ TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp  TP/automata/dfa/DeterministicFiniteAutomata.cpp TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp TP/parser/Parser.cpp TP/auxiliarmethods/CollectionsOperators.cpp TP/automata/convertion/ConvertionOfAutomatas.cpp TP/parser/automata-to-string/dfa/DFAToString.cpp TP/parser/automata-to-string/ndfa/NDFAToString.cpp

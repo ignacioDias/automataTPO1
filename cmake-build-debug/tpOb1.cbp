@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/Main.cpp">
-			<Option target="tpOb1"/>
-		</Unit>
-		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/AutomataInterface.h">
-			<Option target="tpOb1"/>
-		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.cpp">
 			<Option target="tpOb1"/>
 		</Unit>
@@ -112,10 +106,49 @@
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.h">
 			<Option target="tpOb1"/>
 		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_creation.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_creation.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.cpp">
 			<Option target="tpOb1"/>
 		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.h">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testMover.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testParserFunctions.cpp">
 			<Option target="tpOb1"/>
 		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/CMakeLists.txt">

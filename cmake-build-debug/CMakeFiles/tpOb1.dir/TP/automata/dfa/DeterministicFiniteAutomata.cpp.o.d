@@ -305,6 +305,4 @@ CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o: \
  /usr/include/c++/11/bits/unordered_set.h \
  /usr/include/c++/11/shared_mutex \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/DeterministicFiniteAutomata.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/../AutomataInterface.h \
- /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/../../auxiliarmethods/CollectionsOperators.h \
  /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/dfa/../../auxiliarmethods/CollectionsOperators.h

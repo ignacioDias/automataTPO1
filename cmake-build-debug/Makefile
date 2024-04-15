@@ -129,30 +129,6 @@ tpOb1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/build
 .PHONY : tpOb1/fast
 
-TP/Main.o: TP/Main.cpp.o
-.PHONY : TP/Main.o
-
-# target to build an object file
-TP/Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.o
-.PHONY : TP/Main.cpp.o
-
-TP/Main.i: TP/Main.cpp.i
-.PHONY : TP/Main.i
-
-# target to preprocess a source file
-TP/Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.i
-.PHONY : TP/Main.cpp.i
-
-TP/Main.s: TP/Main.cpp.s
-.PHONY : TP/Main.s
-
-# target to generate assembly for a file
-TP/Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/Main.cpp.s
-.PHONY : TP/Main.cpp.s
-
 TP/automata/convertion/ConvertionOfAutomatas.o: TP/automata/convertion/ConvertionOfAutomatas.cpp.o
 .PHONY : TP/automata/convertion/ConvertionOfAutomatas.o
 
@@ -249,6 +225,102 @@ TP/auxiliarmethods/CollectionsOperators.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s
 .PHONY : TP/auxiliarmethods/CollectionsOperators.cpp.s
 
+TP/ejemplos_documentados/ex1_file_creation.o: TP/ejemplos_documentados/ex1_file_creation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.o
+
+# target to build an object file
+TP/ejemplos_documentados/ex1_file_creation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.cpp.o
+
+TP/ejemplos_documentados/ex1_file_creation.i: TP/ejemplos_documentados/ex1_file_creation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.i
+
+# target to preprocess a source file
+TP/ejemplos_documentados/ex1_file_creation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.cpp.i
+
+TP/ejemplos_documentados/ex1_file_creation.s: TP/ejemplos_documentados/ex1_file_creation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.s
+
+# target to generate assembly for a file
+TP/ejemplos_documentados/ex1_file_creation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex1_file_creation.cpp.s
+
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.o: TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.o
+
+# target to build an object file
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o
+
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.i: TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.i
+
+# target to preprocess a source file
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i
+
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.s: TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.s
+
+# target to generate assembly for a file
+TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s
+
+TP/ejemplos_documentados/ex2_file_creation.o: TP/ejemplos_documentados/ex2_file_creation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.o
+
+# target to build an object file
+TP/ejemplos_documentados/ex2_file_creation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.cpp.o
+
+TP/ejemplos_documentados/ex2_file_creation.i: TP/ejemplos_documentados/ex2_file_creation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.i
+
+# target to preprocess a source file
+TP/ejemplos_documentados/ex2_file_creation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.cpp.i
+
+TP/ejemplos_documentados/ex2_file_creation.s: TP/ejemplos_documentados/ex2_file_creation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.s
+
+# target to generate assembly for a file
+TP/ejemplos_documentados/ex2_file_creation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex2_file_creation.cpp.s
+
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.o: TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.o
+
+# target to build an object file
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o
+
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.i: TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.i
+
+# target to preprocess a source file
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i
+
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.s: TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.s
+
+# target to generate assembly for a file
+TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s
+.PHONY : TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s
+
 TP/parser/Parser.o: TP/parser/Parser.cpp.o
 .PHONY : TP/parser/Parser.o
 
@@ -273,6 +345,174 @@ TP/parser/Parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s
 .PHONY : TP/parser/Parser.cpp.s
 
+TP/parser/automata-to-string/dfa/DFAToString.o: TP/parser/automata-to-string/dfa/DFAToString.cpp.o
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.o
+
+# target to build an object file
+TP/parser/automata-to-string/dfa/DFAToString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.cpp.o
+
+TP/parser/automata-to-string/dfa/DFAToString.i: TP/parser/automata-to-string/dfa/DFAToString.cpp.i
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.i
+
+# target to preprocess a source file
+TP/parser/automata-to-string/dfa/DFAToString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.i
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.cpp.i
+
+TP/parser/automata-to-string/dfa/DFAToString.s: TP/parser/automata-to-string/dfa/DFAToString.cpp.s
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.s
+
+# target to generate assembly for a file
+TP/parser/automata-to-string/dfa/DFAToString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.s
+.PHONY : TP/parser/automata-to-string/dfa/DFAToString.cpp.s
+
+TP/parser/automata-to-string/ndfa/NDFAToString.o: TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.o
+
+# target to build an object file
+TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o
+
+TP/parser/automata-to-string/ndfa/NDFAToString.i: TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.i
+
+# target to preprocess a source file
+TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i
+
+TP/parser/automata-to-string/ndfa/NDFAToString.s: TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.s
+
+# target to generate assembly for a file
+TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
+.PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
+
+TP/testing/fileToNdfa.o: TP/testing/fileToNdfa.cpp.o
+.PHONY : TP/testing/fileToNdfa.o
+
+# target to build an object file
+TP/testing/fileToNdfa.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o
+.PHONY : TP/testing/fileToNdfa.cpp.o
+
+TP/testing/fileToNdfa.i: TP/testing/fileToNdfa.cpp.i
+.PHONY : TP/testing/fileToNdfa.i
+
+# target to preprocess a source file
+TP/testing/fileToNdfa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.i
+.PHONY : TP/testing/fileToNdfa.cpp.i
+
+TP/testing/fileToNdfa.s: TP/testing/fileToNdfa.cpp.s
+.PHONY : TP/testing/fileToNdfa.s
+
+# target to generate assembly for a file
+TP/testing/fileToNdfa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.s
+.PHONY : TP/testing/fileToNdfa.cpp.s
+
+TP/testing/ndfaToFile.o: TP/testing/ndfaToFile.cpp.o
+.PHONY : TP/testing/ndfaToFile.o
+
+# target to build an object file
+TP/testing/ndfaToFile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o
+.PHONY : TP/testing/ndfaToFile.cpp.o
+
+TP/testing/ndfaToFile.i: TP/testing/ndfaToFile.cpp.i
+.PHONY : TP/testing/ndfaToFile.i
+
+# target to preprocess a source file
+TP/testing/ndfaToFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.i
+.PHONY : TP/testing/ndfaToFile.cpp.i
+
+TP/testing/ndfaToFile.s: TP/testing/ndfaToFile.cpp.s
+.PHONY : TP/testing/ndfaToFile.s
+
+# target to generate assembly for a file
+TP/testing/ndfaToFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.s
+.PHONY : TP/testing/ndfaToFile.cpp.s
+
+TP/testing/testClausuraLambda.o: TP/testing/testClausuraLambda.cpp.o
+.PHONY : TP/testing/testClausuraLambda.o
+
+# target to build an object file
+TP/testing/testClausuraLambda.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o
+.PHONY : TP/testing/testClausuraLambda.cpp.o
+
+TP/testing/testClausuraLambda.i: TP/testing/testClausuraLambda.cpp.i
+.PHONY : TP/testing/testClausuraLambda.i
+
+# target to preprocess a source file
+TP/testing/testClausuraLambda.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.i
+.PHONY : TP/testing/testClausuraLambda.cpp.i
+
+TP/testing/testClausuraLambda.s: TP/testing/testClausuraLambda.cpp.s
+.PHONY : TP/testing/testClausuraLambda.s
+
+# target to generate assembly for a file
+TP/testing/testClausuraLambda.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.s
+.PHONY : TP/testing/testClausuraLambda.cpp.s
+
+TP/testing/testMover.o: TP/testing/testMover.cpp.o
+.PHONY : TP/testing/testMover.o
+
+# target to build an object file
+TP/testing/testMover.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o
+.PHONY : TP/testing/testMover.cpp.o
+
+TP/testing/testMover.i: TP/testing/testMover.cpp.i
+.PHONY : TP/testing/testMover.i
+
+# target to preprocess a source file
+TP/testing/testMover.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.i
+.PHONY : TP/testing/testMover.cpp.i
+
+TP/testing/testMover.s: TP/testing/testMover.cpp.s
+.PHONY : TP/testing/testMover.s
+
+# target to generate assembly for a file
+TP/testing/testMover.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.s
+.PHONY : TP/testing/testMover.cpp.s
+
+TP/testing/testParserFunctions.o: TP/testing/testParserFunctions.cpp.o
+.PHONY : TP/testing/testParserFunctions.o
+
+# target to build an object file
+TP/testing/testParserFunctions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o
+.PHONY : TP/testing/testParserFunctions.cpp.o
+
+TP/testing/testParserFunctions.i: TP/testing/testParserFunctions.cpp.i
+.PHONY : TP/testing/testParserFunctions.i
+
+# target to preprocess a source file
+TP/testing/testParserFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.i
+.PHONY : TP/testing/testParserFunctions.cpp.i
+
+TP/testing/testParserFunctions.s: TP/testing/testParserFunctions.cpp.s
+.PHONY : TP/testing/testParserFunctions.s
+
+# target to generate assembly for a file
+TP/testing/testParserFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.s
+.PHONY : TP/testing/testParserFunctions.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,9 +522,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tpOb1"
-	@echo "... TP/Main.o"
-	@echo "... TP/Main.i"
-	@echo "... TP/Main.s"
 	@echo "... TP/automata/convertion/ConvertionOfAutomatas.o"
 	@echo "... TP/automata/convertion/ConvertionOfAutomatas.i"
 	@echo "... TP/automata/convertion/ConvertionOfAutomatas.s"
@@ -297,9 +534,42 @@ help:
 	@echo "... TP/auxiliarmethods/CollectionsOperators.o"
 	@echo "... TP/auxiliarmethods/CollectionsOperators.i"
 	@echo "... TP/auxiliarmethods/CollectionsOperators.s"
+	@echo "... TP/ejemplos_documentados/ex1_file_creation.o"
+	@echo "... TP/ejemplos_documentados/ex1_file_creation.i"
+	@echo "... TP/ejemplos_documentados/ex1_file_creation.s"
+	@echo "... TP/ejemplos_documentados/ex1_file_read_and_string_validation.o"
+	@echo "... TP/ejemplos_documentados/ex1_file_read_and_string_validation.i"
+	@echo "... TP/ejemplos_documentados/ex1_file_read_and_string_validation.s"
+	@echo "... TP/ejemplos_documentados/ex2_file_creation.o"
+	@echo "... TP/ejemplos_documentados/ex2_file_creation.i"
+	@echo "... TP/ejemplos_documentados/ex2_file_creation.s"
+	@echo "... TP/ejemplos_documentados/ex2_file_read_and_string_validation.o"
+	@echo "... TP/ejemplos_documentados/ex2_file_read_and_string_validation.i"
+	@echo "... TP/ejemplos_documentados/ex2_file_read_and_string_validation.s"
 	@echo "... TP/parser/Parser.o"
 	@echo "... TP/parser/Parser.i"
 	@echo "... TP/parser/Parser.s"
+	@echo "... TP/parser/automata-to-string/dfa/DFAToString.o"
+	@echo "... TP/parser/automata-to-string/dfa/DFAToString.i"
+	@echo "... TP/parser/automata-to-string/dfa/DFAToString.s"
+	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.o"
+	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.i"
+	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.s"
+	@echo "... TP/testing/fileToNdfa.o"
+	@echo "... TP/testing/fileToNdfa.i"
+	@echo "... TP/testing/fileToNdfa.s"
+	@echo "... TP/testing/ndfaToFile.o"
+	@echo "... TP/testing/ndfaToFile.i"
+	@echo "... TP/testing/ndfaToFile.s"
+	@echo "... TP/testing/testClausuraLambda.o"
+	@echo "... TP/testing/testClausuraLambda.i"
+	@echo "... TP/testing/testClausuraLambda.s"
+	@echo "... TP/testing/testMover.o"
+	@echo "... TP/testing/testMover.i"
+	@echo "... TP/testing/testMover.s"
+	@echo "... TP/testing/testParserFunctions.o"
+	@echo "... TP/testing/testParserFunctions.i"
+	@echo "... TP/testing/testParserFunctions.s"
 .PHONY : help
 
 

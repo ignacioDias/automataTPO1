@@ -111,24 +111,10 @@ CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp -o CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.s
 
-CMakeFiles/tpOb1.dir/TP/Main.cpp.o: CMakeFiles/tpOb1.dir/flags.make
-CMakeFiles/tpOb1.dir/TP/Main.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/Main.cpp
-CMakeFiles/tpOb1.dir/TP/Main.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tpOb1.dir/TP/Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/Main.cpp.o -MF CMakeFiles/tpOb1.dir/TP/Main.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/Main.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/Main.cpp
-
-CMakeFiles/tpOb1.dir/TP/Main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/Main.cpp > CMakeFiles/tpOb1.dir/TP/Main.cpp.i
-
-CMakeFiles/tpOb1.dir/TP/Main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/Main.cpp -o CMakeFiles/tpOb1.dir/TP/Main.cpp.s
-
 CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: CMakeFiles/tpOb1.dir/flags.make
 CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.cpp
 CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o -MF CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.cpp
 
 CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.s: cmake_force
 CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o: CMakeFiles/tpOb1.dir/flags.make
 CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.cpp
 CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o -MF CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.cpp
 
 CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.i: cmake_force
@@ -153,14 +139,178 @@ CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/convertion/ConvertionOfAutomatas.cpp -o CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.s
 
+CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp
+CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o -MF CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp
+
+CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp > CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp -o CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp
+CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o -MF CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp
+
+CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp > CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp -o CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp
+CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o -MF CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp
+
+CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp > CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp -o CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testMover.cpp
+CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o -MF CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testMover.cpp
+
+CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testMover.cpp > CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testMover.cpp -o CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testParserFunctions.cpp
+CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o -MF CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testParserFunctions.cpp
+
+CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testParserFunctions.cpp > CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testParserFunctions.cpp -o CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o -MF CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp > CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp -o CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_creation.cpp
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o -MF CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_creation.cpp
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_creation.cpp > CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_creation.cpp -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o -MF CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp > CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_creation.cpp
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o -MF CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_creation.cpp
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_creation.cpp > CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_creation.cpp -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o -MF CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp > CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp -o CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.s
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o: CMakeFiles/tpOb1.dir/flags.make
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o: /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o: CMakeFiles/tpOb1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o -MF CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o.d -o CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o -c /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp > CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.i
+
+CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp -o CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.s
+
 # Object files for target tpOb1
 tpOb1_OBJECTS = \
 "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o" \
 "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o" \
 "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o" \
-"CMakeFiles/tpOb1.dir/TP/Main.cpp.o" \
 "CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o" \
-"CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o"
+"CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o" \
+"CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o"
 
 # External object files for target tpOb1
 tpOb1_EXTERNAL_OBJECTS =
@@ -168,12 +318,22 @@ tpOb1_EXTERNAL_OBJECTS =
 tpOb1: CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o
-tpOb1: CMakeFiles/tpOb1.dir/TP/Main.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/TP/automata/convertion/ConvertionOfAutomatas.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/testing/testMover.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/testing/testParserFunctions.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_read_and_string_validation.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_creation.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex2_file_read_and_string_validation.cpp.o
+tpOb1: CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o
 tpOb1: CMakeFiles/tpOb1.dir/build.make
 tpOb1: CMakeFiles/tpOb1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable tpOb1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable tpOb1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tpOb1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

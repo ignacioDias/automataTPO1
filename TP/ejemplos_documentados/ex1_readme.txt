@@ -12,7 +12,7 @@ donde:
         d(4,_) = 3
         d(4,1) = 5  
     }
-    q0 = 0
+    q0 = 3
     F = {5} 
 El automata lee expresiones regulares de la forma ((0|1)*0)+1. 
 Ejemplos de cadenas que acepta son: 

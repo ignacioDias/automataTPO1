@@ -16,6 +16,15 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
     newAutomata.addState(newInitialState);
     newAutomata.setInitialState(newInitialState); 
 
+    //add alphabet
+    for(int s: a1.getAlphabet()){
+        newAutomata.addSymbolToAlphabet(s); 
+    }
+    for(int s: a2.getAlphabet()){
+        newAutomata.addSymbolToAlphabet(s); 
+    }
+    
+
     //add states of a1 and a2
     for(int state: a1.getSates()){
         newAutomata.addState(state); 
@@ -40,8 +49,32 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
 
 NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2)
 {
-    //TODO
-    return NotDeterministicFiniteAutomata();
+    NotDeterministicFiniteAutomata newAutomata = NotDeterministicFiniteAutomata();
+    newAutomata.setInitialState(a1.getInitialState()); 
+
+    //add alphabet
+    for(int s: a1.getAlphabet()){
+        newAutomata.addSymbolToAlphabet(s); 
+    }
+    for(int s: a2.getAlphabet()){
+        newAutomata.addSymbolToAlphabet(s); 
+    }
+
+    //add states of a1 and a2
+    for(int state: a1.getSates()){
+        newAutomata.addState(state); 
+    }
+    for(int state: a1.getSates()){
+        newAutomata.addState(state); 
+    }
+    
+    for(int finalStateOfA1: a1.getFinalSates()){
+        newAutomata.addPath(finalStateOfA1, LAMBDA, a2.getInitialState()); 
+    }
+    
+    newAutomata.setFinalState(a2.getFinalSates()); 
+
+    return newAutomata;
 }
 
 NotDeterministicFiniteAutomata AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2)

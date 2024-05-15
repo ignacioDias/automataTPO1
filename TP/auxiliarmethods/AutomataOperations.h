@@ -9,4 +9,5 @@ public:
     static DeterministicFiniteAutomata minimization(DeterministicFiniteAutomata dfa);
 private:
     static int renameAutomata(NotDeterministicFiniteAutomata a1, int counter);
+    static bool checkSameEquivalenceClass(set<int> delta1, set<int> delta2, vector<set<set<int>>> states);
 };

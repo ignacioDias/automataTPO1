@@ -1,4 +1,4 @@
-/snap/clion/274/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1 -B /home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug
+/snap/clion/275/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/ignaciodias/Desktop/uni/automatas/automataTPO1 -B /home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 

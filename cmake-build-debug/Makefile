@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/274/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/275/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/274/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/275/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/ignaciodias/Desktop/uni/automatas/automataTPO1/cmake-bu
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/snap/clion/274/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/275/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/clion/274/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/275/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -200,6 +200,30 @@ TP/automata/ndfa/NotDeterministicFiniteAutomata.s: TP/automata/ndfa/NotDetermini
 TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
 .PHONY : TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.s
+
+TP/auxiliarmethods/AutomataOperations.o: TP/auxiliarmethods/AutomataOperations.cpp.o
+.PHONY : TP/auxiliarmethods/AutomataOperations.o
+
+# target to build an object file
+TP/auxiliarmethods/AutomataOperations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/AutomataOperations.cpp.o
+.PHONY : TP/auxiliarmethods/AutomataOperations.cpp.o
+
+TP/auxiliarmethods/AutomataOperations.i: TP/auxiliarmethods/AutomataOperations.cpp.i
+.PHONY : TP/auxiliarmethods/AutomataOperations.i
+
+# target to preprocess a source file
+TP/auxiliarmethods/AutomataOperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/AutomataOperations.cpp.i
+.PHONY : TP/auxiliarmethods/AutomataOperations.cpp.i
+
+TP/auxiliarmethods/AutomataOperations.s: TP/auxiliarmethods/AutomataOperations.cpp.s
+.PHONY : TP/auxiliarmethods/AutomataOperations.s
+
+# target to generate assembly for a file
+TP/auxiliarmethods/AutomataOperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/auxiliarmethods/AutomataOperations.cpp.s
+.PHONY : TP/auxiliarmethods/AutomataOperations.cpp.s
 
 TP/auxiliarmethods/CollectionsOperators.o: TP/auxiliarmethods/CollectionsOperators.cpp.o
 .PHONY : TP/auxiliarmethods/CollectionsOperators.o
@@ -531,6 +555,9 @@ help:
 	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.o"
 	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.i"
 	@echo "... TP/automata/ndfa/NotDeterministicFiniteAutomata.s"
+	@echo "... TP/auxiliarmethods/AutomataOperations.o"
+	@echo "... TP/auxiliarmethods/AutomataOperations.i"
+	@echo "... TP/auxiliarmethods/AutomataOperations.s"
 	@echo "... TP/auxiliarmethods/CollectionsOperators.o"
 	@echo "... TP/auxiliarmethods/CollectionsOperators.i"
 	@echo "... TP/auxiliarmethods/CollectionsOperators.s"

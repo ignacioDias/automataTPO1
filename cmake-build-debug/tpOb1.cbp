@@ -100,6 +100,12 @@
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/automata/ndfa/NotDeterministicFiniteAutomata.h">
 			<Option target="tpOb1"/>
 		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/auxiliarmethods/AutomataOperations.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/auxiliarmethods/AutomataOperations.h">
+			<Option target="tpOb1"/>
+		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/auxiliarmethods/CollectionsOperators.cpp">
 			<Option target="tpOb1"/>
 		</Unit>

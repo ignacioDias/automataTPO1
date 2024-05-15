@@ -34,7 +34,10 @@ void NotDeterministicFiniteAutomata::setFinalState(set<int> final) {
     this->F = std::move(final);
 }
 void NotDeterministicFiniteAutomata :: addState(int state) {
-    this->K.insert(state);
+    if(!CollectionsOperators::belongs(state, K))
+        this->K.insert(state);
+    else
+        cout << "Nodo ya existente";
 }
 void NotDeterministicFiniteAutomata :: addSymbolToAlphabet(int state) {
     this->E.insert(state);
@@ -42,7 +45,44 @@ void NotDeterministicFiniteAutomata :: addSymbolToAlphabet(int state) {
 void NotDeterministicFiniteAutomata ::addFinalState(int state) {
     this->F.insert(state);
 }
+void NotDeterministicFiniteAutomata :: changeValueState(int oldValue, int newValue) {
+    if(!CollectionsOperators::belongs(newValue, K) && CollectionsOperators::belongs(oldValue, K)) {
+        if(oldValue == q0)
+            q0 = newValue;
+        pair<int,int> pairToChange;
+        pairToChange.first = oldValue;
+        K.erase(oldValue);
+        K.insert(newValue);
+        for(auto letter : E) {
+            pairToChange.second = letter;
+            for(auto destination : calculateDelta(pairToChange))
+                if(destination == oldValue)
+                    addPath(newValue, letter, newValue);
+                else
+                    addPath(newValue, letter, destination);
+            for(auto node : K) {
+                pair<int,int> pairTemp = make_pair(node, letter);
+                if(CollectionsOperators::belongs(oldValue, calculateDelta(pairTemp))) {
+                    d[pairTemp].erase(oldValue);
+                    addPath(node, letter, newValue);
+                }
+            }
+        }
+        for(auto letter : E) {
+            pairToChange.second = letter;
+            d.erase(pairToChange);
+        }
+        if(CollectionsOperators::belongs(oldValue, F)) {
+            F.insert(newValue);
+            F.erase(oldValue);
+        }
+    } else {
+        cout << "Nodo ya existente";
+    }
+}
+
 void NotDeterministicFiniteAutomata :: addPath(int node, int arc, int destination) { //TODO: CHECKEAR QUE NODE Y ARC SEAN VÁLIDOS
+    if(CollectionsOperators::belongs(node, K) && CollectionsOperators::belongs(arc, E) && CollectionsOperators::belongs(destination, K));
     pair<int,int> path;
     path.first = node;
     path.second = arc;

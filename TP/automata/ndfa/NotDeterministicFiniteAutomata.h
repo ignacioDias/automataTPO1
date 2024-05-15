@@ -31,6 +31,7 @@ public:
     void addPath(int node, int arc, int destination);
     set<int> calculateDelta(pair<int,int> key);
     set<int> calculateWaysToGo(int from, int destination);
+    void changeValueState(int oldValue, int newValue);
 
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

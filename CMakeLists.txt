@@ -30,4 +30,6 @@ add_executable(tpOb1
         TP/ejemplos_documentados/ex2_file_creation.cpp
         TP/parser/automata-to-string/dfa/DFAToString.h
         TP/parser/automata-to-string/dfa/DFAToString.cpp
+        TP/auxiliarmethods/AutomataOperations.cpp
+        TP/auxiliarmethods/AutomataOperations.h
 )

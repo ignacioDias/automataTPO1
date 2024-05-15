@@ -31,7 +31,7 @@ set<int> DeterministicFiniteAutomata :: getInitialState() {
     return this->q0;
 }
 void DeterministicFiniteAutomata :: setFinalStates(set<set<int>> final) {
-    this->F = final;
+    this->F = std::move(final);
 }
 set<set<int>> DeterministicFiniteAutomata :: getFinalStates() {
     return this->F;
@@ -46,7 +46,7 @@ void DeterministicFiniteAutomata :: addPath(const set<int>& node, int arc, set<i
 }
 bool DeterministicFiniteAutomata :: repOk() {
     bool invariant = true;
-    for(auto currentSet : K) {
+    for(const auto& currentSet : K) {
         invariant &= CollectionsOperators::setContained(this->F, currentSet);
         invariant &= CollectionsOperators::contained(this->q0, currentSet);
     }

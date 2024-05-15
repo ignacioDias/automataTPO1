@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tpOb1.dir/TP/automata/dfa/DeterministicFiniteAutomata.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/automata/ndfa/NotDeterministicFiniteAutomata.cpp.o.d"
+  "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/AutomataOperations.cpp.o"
+  "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/AutomataOperations.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/auxiliarmethods/CollectionsOperators.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/ejemplos_documentados/ex1_file_creation.cpp.o"

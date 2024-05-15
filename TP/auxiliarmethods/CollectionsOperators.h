@@ -13,6 +13,10 @@ public:
     static void insertAll(set<int>& setToBeModify, const set<int>& otherSet);
     static string to_string_set(const set<int>& set);
     static string to_string_set_of_sets(const set<set<int>>& setOfSets);
-    };
+
+    static set<set<int>> difference(const set<set<int>> &set1, const set<set<int>> &set2);
+
+    static bool containedSetInSet2(const set<int>& set1, const set<set<int>> &set2);
+};
 
 #endif //TPOB1_COLLECTIONSOPERATORS_H

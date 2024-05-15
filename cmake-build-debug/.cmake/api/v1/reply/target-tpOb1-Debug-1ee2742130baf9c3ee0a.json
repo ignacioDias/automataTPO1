@@ -64,7 +64,8 @@
 				18,
 				19,
 				20,
-				22
+				22,
+				23
 			]
 		}
 	],
@@ -112,7 +113,8 @@
 				18,
 				19,
 				20,
-				22
+				22,
+				23
 			]
 		},
 		{
@@ -125,7 +127,8 @@
 				6,
 				8,
 				15,
-				21
+				21,
+				24
 			]
 		}
 	],
@@ -261,6 +264,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "TP/parser/automata-to-string/dfa/DFAToString.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TP/auxiliarmethods/AutomataOperations.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "TP/auxiliarmethods/AutomataOperations.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

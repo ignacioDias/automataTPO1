@@ -28,8 +28,8 @@ public:
     bool checkValidString(const string& numbers);
     void insertSate(const set<int>& state);
     set<int> calculateWaysToGo(const set<int>& set1, const set<int>& set2);
-
-private:
+    void addState(const set<int>& state);
+    void addFinalState(const set<int>& state);
     bool isFinalNode(const set<int>& node);
 };
 #endif // DETERMINISTICFINITEAUTOMATA_H

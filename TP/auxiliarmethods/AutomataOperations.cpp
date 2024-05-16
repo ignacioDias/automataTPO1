@@ -96,23 +96,39 @@ DeterministicFiniteAutomata AutomataOperations::minimization(DeterministicFinite
                             equalDeltas = false;
                             break;
                         }
-                    }
+                    } //for letter in alphabet
                     if (equalDeltas)
                         xPrime.insert(elemPrime);
-                }
+                } // for e' in state
                 statesPrime.push_back(xPrime);
-            }
+            } // for e in X
             if(states != statesPrime) {
                 states = statesPrime;
                 statesPrime = {};
             } else {
                 changePartition = true;
             }
+        } //for state in states
+    } //while
+    for(auto elem : states) {
+        set<int> actualState = CollectionsOperators::getElem(elem);
+        if(CollectionsOperators::equalSets(actualState, dfa.getInitialState()))
+            minimizedAutomata.setInitialState(actualState);
+        if(CollectionsOperators::setContained(dfa.getFinalStates(), actualState))
+            minimizedAutomata.addFinalState(actualState);
+        minimizedAutomata.addState(actualState);
+        for(const auto& elem2 : states) {
+            set<int> destinationState = CollectionsOperators::getElem(elem2);
+            set<int> letters = dfa.calculateWaysToGo(actualState, destinationState);
+            for(auto letter : letters) {
+                minimizedAutomata.addPath(actualState, letter, destinationState);
+            }
         }
     }
+    minimizedAutomata.setAlphabet(dfa.getAlphabet());
     return minimizedAutomata;
 }
-bool AutomataOperations :: checkSameEquivalenceClass(set<int> delta1, set<int> delta2, vector<set<set<int>>> states) {
+bool AutomataOperations :: checkSameEquivalenceClass(const set<int>& delta1, set<int> delta2, const vector<set<set<int>>>& states) {
     for(const auto& state : states) {
         if(CollectionsOperators::setContained(state, delta1) && !CollectionsOperators::setContained(state, delta2))
             return false;

@@ -16,6 +16,12 @@ set<int> DeterministicFiniteAutomata::getAlphabet() {
 void DeterministicFiniteAutomata :: setStates(set<set<int>> states) {
     this->K = std::move(states);
 }
+void DeterministicFiniteAutomata :: addState(const set<int>& state) {
+    this->K.insert(state);
+}
+void DeterministicFiniteAutomata :: addFinalState(const set<int>& state) {
+    this->F.insert(state);
+}
 set<set<int>> DeterministicFiniteAutomata :: getStates() {
     return this->K;
 }

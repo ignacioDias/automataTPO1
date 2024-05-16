@@ -19,9 +19,9 @@ bool CollectionsOperators :: belongs(int elem, const set<int>& set) {
     }
     return false;
 }
-bool CollectionsOperators :: setContained(const set<set<int>>& firstSet, const set<int>& biggerSet) {
-    for(const auto& currentSet : firstSet) {
-        if(currentSet == biggerSet || contained(currentSet, biggerSet))
+bool CollectionsOperators :: setContained(const set<set<int>>& biggerSet, const set<int>& smallerSet) {
+    for(const auto& currentSet : biggerSet) {
+        if(currentSet == smallerSet || contained(currentSet, smallerSet))
             return true;
     }
     return false;
@@ -55,6 +55,19 @@ set<set<int>> CollectionsOperators::difference(const set<set<int>>& set1, const 
             finalSet.insert(elem);
     }
     return finalSet;
+}
+set<int> CollectionsOperators::getElem(const set<set<int>>& set) {
+    for(auto elem : set)
+        return elem;
+}
+bool CollectionsOperators :: equalSets(const set<int>& set1, const set<int>& set2) {
+    if(set1.size() != set2.size())
+        return false;
+    for(auto elem : set1) {
+        if(!belongs(elem, set2))
+            return false;
+    }
+    return true;
 }
 
 bool CollectionsOperators::containedSetInSet2(const set<int>& set1, const set<set<int>> &set2) {

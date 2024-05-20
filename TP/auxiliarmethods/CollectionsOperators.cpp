@@ -51,7 +51,7 @@ string CollectionsOperators::to_string_set_of_sets(const set<set<int>>& setOfSet
 set<set<int>> CollectionsOperators::difference(const set<set<int>>& set1, const set<set<int>>& set2) {
     set<set<int>> finalSet;
     for(const auto& elem : set2) {
-        if(!containedSetInSet2(elem, set1))
+        if(!setContained(set1, elem))
             finalSet.insert(elem);
     }
     return finalSet;
@@ -70,10 +70,6 @@ bool CollectionsOperators :: equalSets(const set<int>& set1, const set<int>& set
     return true;
 }
 
-bool CollectionsOperators::containedSetInSet2(const set<int>& set1, const set<set<int>> &set2) {
-    for(const auto& elem : set2) {
-        if(elem == set1)
-            return true;
-    }
+bool CollectionsOperators::setOfSetContainedInOther(set<set<int>> set1, set<set<int>> set2) {
     return false;
 }

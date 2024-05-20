@@ -112,9 +112,9 @@ DeterministicFiniteAutomata AutomataOperations::minimization(DeterministicFinite
     } //while
     for(auto elem : states) {
         set<int> actualState = CollectionsOperators::getElem(elem);
-        if(CollectionsOperators::equalSets(actualState, dfa.getInitialState()))
+        if(CollectionsOperators::setContained(elem, dfa.getInitialState()))
             minimizedAutomata.setInitialState(actualState);
-        if(CollectionsOperators::setContained(dfa.getFinalStates(), actualState))
+        if(CollectionsOperators::setOfSetContainedInOther(elem, dfa.getFinalStates()))
             minimizedAutomata.addFinalState(actualState);
         minimizedAutomata.addState(actualState);
         for(const auto& elem2 : states) {

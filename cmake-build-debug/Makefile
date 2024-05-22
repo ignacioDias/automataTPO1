@@ -417,6 +417,30 @@ TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
 .PHONY : TP/parser/automata-to-string/ndfa/NDFAToString.cpp.s
 
+TP/testing/TestRename.o: TP/testing/TestRename.cpp.o
+.PHONY : TP/testing/TestRename.o
+
+# target to build an object file
+TP/testing/TestRename.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.o
+.PHONY : TP/testing/TestRename.cpp.o
+
+TP/testing/TestRename.i: TP/testing/TestRename.cpp.i
+.PHONY : TP/testing/TestRename.i
+
+# target to preprocess a source file
+TP/testing/TestRename.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.i
+.PHONY : TP/testing/TestRename.cpp.i
+
+TP/testing/TestRename.s: TP/testing/TestRename.cpp.s
+.PHONY : TP/testing/TestRename.s
+
+# target to generate assembly for a file
+TP/testing/TestRename.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.s
+.PHONY : TP/testing/TestRename.cpp.s
+
 TP/testing/fileToNdfa.o: TP/testing/fileToNdfa.cpp.o
 .PHONY : TP/testing/fileToNdfa.o
 
@@ -582,6 +606,9 @@ help:
 	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.o"
 	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.i"
 	@echo "... TP/parser/automata-to-string/ndfa/NDFAToString.s"
+	@echo "... TP/testing/TestRename.o"
+	@echo "... TP/testing/TestRename.i"
+	@echo "... TP/testing/TestRename.s"
 	@echo "... TP/testing/fileToNdfa.o"
 	@echo "... TP/testing/fileToNdfa.i"
 	@echo "... TP/testing/fileToNdfa.s"

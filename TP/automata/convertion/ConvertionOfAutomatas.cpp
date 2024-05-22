@@ -88,7 +88,6 @@ set<int> ConvertionOfAutomatas::getLambdaReachableStates(int state) {
             }
         }
     }
-
     return result;
 }
 

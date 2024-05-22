@@ -65,7 +65,8 @@
 				19,
 				20,
 				22,
-				23
+				23,
+				26
 			]
 		}
 	],
@@ -114,7 +115,8 @@
 				19,
 				20,
 				22,
-				23
+				23,
+				26
 			]
 		},
 		{
@@ -128,7 +130,8 @@
 				8,
 				15,
 				21,
-				24
+				24,
+				25
 			]
 		}
 	],
@@ -275,6 +278,17 @@
 			"backtrace" : 1,
 			"path" : "TP/auxiliarmethods/AutomataOperations.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "TP/testing/TestRename.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TP/testing/TestRename.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

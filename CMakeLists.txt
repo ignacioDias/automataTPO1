@@ -32,4 +32,6 @@ add_executable(tpOb1
         TP/parser/automata-to-string/dfa/DFAToString.cpp
         TP/auxiliarmethods/AutomataOperations.cpp
         TP/auxiliarmethods/AutomataOperations.h
+        TP/testing/TestRename.h
+        TP/testing/TestRename.cpp
 )

@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/Parser.cpp" "CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/parser/Parser.cpp.o.d"
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/dfa/DFAToString.cpp" "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o.d"
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/parser/automata-to-string/ndfa/NDFAToString.cpp" "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o.d"
+  "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/TestRename.cpp" "CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.o.d"
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp" "CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o.d"
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/ndfaToFile.cpp" "CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o.d"
   "/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/testClausuraLambda.cpp" "CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o" "gcc" "CMakeFiles/tpOb1.dir/TP/testing/testClausuraLambda.cpp.o.d"

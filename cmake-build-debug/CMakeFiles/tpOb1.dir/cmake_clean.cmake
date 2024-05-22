@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/dfa/DFAToString.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/parser/automata-to-string/ndfa/NDFAToString.cpp.o.d"
+  "CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.o"
+  "CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o"
   "CMakeFiles/tpOb1.dir/TP/testing/fileToNdfa.cpp.o.d"
   "CMakeFiles/tpOb1.dir/TP/testing/ndfaToFile.cpp.o"

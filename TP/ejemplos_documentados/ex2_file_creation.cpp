@@ -1,10 +1,3 @@
-/**
- * En este programa se probará la función de cargar un automata
- * por medio de la clase DeterministicFiniteAutomata y guardarlo en un archivo.
- * El automata de ejemplo y las instrucciones de compilación está descrito en ex2_readme.txt
- * El archivo de salida será automata2.dot
-*/
-
 #include <bits/stdc++.h>
 #include "../automata/ndfa/NotDeterministicFiniteAutomata.h"
 #include "../parser/Parser.h"

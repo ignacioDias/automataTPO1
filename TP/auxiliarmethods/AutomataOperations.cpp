@@ -6,8 +6,8 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
 {
     NotDeterministicFiniteAutomata newAutomata = NotDeterministicFiniteAutomata();
     
-    int counter = renameAutomata(a1, 1);
-    renameAutomata(a2, counter);
+    int counter = renameAutomata(&a1, 1);
+    renameAutomata(&a2, counter);
 
     int newInitialState = 0;
     newAutomata.addState(newInitialState);
@@ -32,12 +32,12 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
     }
     return newAutomata;
 }
-int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata a1, int counter) {
-    for(auto node : a1.getSates()) {
-        if(CollectionsOperators::belongs(counter, a1.getSates())) {
-            a1.changeValueState(counter, node);
+int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata *a1, int counter) {
+    for(auto node : a1->getSates()) {
+        if(CollectionsOperators::belongs(counter, a1->getSates())) {
+            a1->changeValueState(counter, node);
         } else {
-            a1.changeValueState(node, counter);
+            a1->changeValueState(node, counter);
         }
         counter++;
     }
@@ -45,7 +45,7 @@ int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata a1, int co
 }
 NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2) {
 
-    int counter = renameAutomata(a1, 0);
+    int counter = renameAutomata(&a1, 0);
     NotDeterministicFiniteAutomata newAutomata = NotDeterministicFiniteAutomata();
     newAutomata.setInitialState(a1.getInitialState());
     for(int s: a1.getAlphabet()){
@@ -57,7 +57,7 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDetermini
     for(int state: a1.getSates()){
         newAutomata.addState(state); 
     }
-    renameAutomata(a2, counter);
+    renameAutomata(&a2, counter);
     for(int state: a2.getSates()){
         newAutomata.addState(state); 
     }
@@ -70,7 +70,7 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDetermini
 
 void AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata a1) {
     NotDeterministicFiniteAutomata kleeneNDA = *new NotDeterministicFiniteAutomata();
-    int cant = renameAutomata(a1, 1);
+    int cant = renameAutomata(&a1, 1);
     int newQ0 = 0;
     a1.addState(newQ0);
     a1.addPath(newQ0, LAMBDA, a1.getInitialState());

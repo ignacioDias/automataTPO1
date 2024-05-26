@@ -37,7 +37,7 @@ int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata *a1, int c
     for(auto node : a1->getStates()) {
         if(CollectionsOperators::belongs(counter, a1->getStates())) {
             a1->changeValueState(counter, node + 200); //solución horrible, no se me ocurrió una mejor, si el usuario pone 201 y 1, se rompe
-            a1->changeValueState(node + 200, counter);
+            a1->changeValueState(node, counter);
         } else
             a1->changeValueState(node, counter);
         counter++;
@@ -78,13 +78,24 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDetermini
     return newAutomata;
 }
 
-void AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata *a1) {
+NotDeterministicFiniteAutomata AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata a1) {
     NotDeterministicFiniteAutomata kleeneNDA = *new NotDeterministicFiniteAutomata();
-    int cant = renameAutomata(a1, 1);
+    renameAutomata(&a1, 2);
     int newQ0 = 0;
-    a1->addState(newQ0);
-    a1->addPath(newQ0, LAMBDA, a1->getInitialState());
-    a1->setInitialState(newQ0);
+    int newQf = 1;
+    kleeneNDA.setStates(a1.getStates());
+    kleeneNDA.addState(newQ0);
+    kleeneNDA.setInitialState(newQ0);
+    kleeneNDA.setTransitions(a1.getTransitions());
+    kleeneNDA.addState(1);
+    kleeneNDA.addFinalState(1);
+    for(int finalState: a1.getFinalStates()){
+        kleeneNDA.addPath(finalState,LAMBDA,1);
+    }
+    kleeneNDA.addPath(0, LAMBDA, 1);
+    kleeneNDA.addPath(1, LAMBDA, 0);
+    return kleeneNDA;
+
 }
 DeterministicFiniteAutomata AutomataOperations::minimization(DeterministicFiniteAutomata dfa) {
     DeterministicFiniteAutomata minimizedAutomata = *new DeterministicFiniteAutomata();

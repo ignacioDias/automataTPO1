@@ -33,5 +33,7 @@ public:
     set<int> calculateWaysToGo(int from, int destination);
     void changeValueState(int oldValue, int newValue);
     map<pair<int, int>, set<int>> getTransitions();
+
+    void setTransitions(map<pair<int, int>, set<int>> map1);
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

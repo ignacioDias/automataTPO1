@@ -112,3 +112,7 @@ set<int> NotDeterministicFiniteAutomata :: calculateWaysToGo(int from, int desti
 map<pair<int, int>, set<int>> NotDeterministicFiniteAutomata::getTransitions() {
     return delta;
 }
+
+void NotDeterministicFiniteAutomata::setTransitions(map<pair<int, int>, set<int>> map1) {
+    delta = std::move(map1);
+}

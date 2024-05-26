@@ -6,11 +6,11 @@ using namespace std;
 
 class DeterministicFiniteAutomata {
 private:
-    set<set<int>> K;
-    set<int> E;
-    map<pair<set<int>,int>, set<int>> d;
-    set<int> q0;
-    set<set<int>> F;
+    set<set<int>> states;
+    set<int> alphabet;
+    map<pair<set<int>,int>, set<int>> delta;
+    set<int> initialState;
+    set<set<int>> finalStates;
 
 public:
     DeterministicFiniteAutomata();

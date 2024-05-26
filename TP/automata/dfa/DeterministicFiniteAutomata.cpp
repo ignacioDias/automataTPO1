@@ -5,62 +5,62 @@
 #include "../../auxiliarmethods/CollectionsOperators.h"
 using namespace std;
 
-DeterministicFiniteAutomata::DeterministicFiniteAutomata() : K(), E(), d(), q0(), F() {
+DeterministicFiniteAutomata::DeterministicFiniteAutomata() : states(), alphabet(), delta(), initialState(), finalStates() {
 }
 void DeterministicFiniteAutomata::setAlphabet(set<int> alphabet) {
-    this->E = std::move(alphabet);
+    this->alphabet = std::move(alphabet);
 }
 set<int> DeterministicFiniteAutomata::getAlphabet() {
-    return this->E;
+    return this->alphabet;
 }
 void DeterministicFiniteAutomata :: setStates(set<set<int>> states) {
-    this->K = std::move(states);
+    this->states = std::move(states);
 }
 void DeterministicFiniteAutomata :: addState(const set<int>& state) {
-    this->K.insert(state);
+    this->states.insert(state);
 }
 void DeterministicFiniteAutomata :: addFinalState(const set<int>& state) {
-    this->F.insert(state);
+    this->finalStates.insert(state);
 }
 set<set<int>> DeterministicFiniteAutomata :: getStates() {
-    return this->K;
+    return this->states;
 }
 void DeterministicFiniteAutomata :: insertSate(const set<int>& state) {
-    this->K.insert(state);
+    this->states.insert(state);
 }
 
 void DeterministicFiniteAutomata :: setInitialState(set<int> q) {
-    this->q0 = std::move(q);
-    this->K.insert(getInitialState());
+    this->initialState = std::move(q);
+    this->states.insert(getInitialState());
 }
 set<int> DeterministicFiniteAutomata :: getInitialState() {
-    return this->q0;
+    return this->initialState;
 }
 void DeterministicFiniteAutomata :: setFinalStates(set<set<int>> final) {
-    this->F = std::move(final);
+    this->finalStates = std::move(final);
 }
 set<set<int>> DeterministicFiniteAutomata :: getFinalStates() {
-    return this->F;
+    return this->finalStates;
 }
 set<int> DeterministicFiniteAutomata :: calculateDelta(const pair<set<int>,int>& key) {
-    return d[key];
+    return delta[key];
 }
 void DeterministicFiniteAutomata :: addPath(const set<int>& node, int arc, set<int> destination) {
     pair<set<int>,int> path = make_pair(node, arc);
-    if(d.count(path) == 0)
-        d[path] = std::move(destination);
+    if(delta.count(path) == 0)
+        delta[path] = std::move(destination);
 }
 bool DeterministicFiniteAutomata :: repOk() {
     bool invariant = true;
-    for(const auto& currentSet : K) {
-        invariant &= CollectionsOperators::setContained(this->F, currentSet);
-        invariant &= CollectionsOperators::contained(this->q0, currentSet);
+    for(const auto& currentSet : states) {
+        invariant &= CollectionsOperators::setContained(this->finalStates, currentSet);
+        invariant &= CollectionsOperators::contained(this->initialState, currentSet);
     }
     return invariant;
 }
 set<int> DeterministicFiniteAutomata::calculateWaysToGo(const set<int>& set1, const set<int>& set2) {
     set<int> ret;
-    for (int letter : this->E) {
+    for (int letter : this->alphabet) {
         set<int> delta = calculateDelta(make_pair(set1, letter));
         if (!delta.empty() && CollectionsOperators::contained(set2, delta)) //{2,3} {2,3,4}
             ret.insert(letter);
@@ -76,12 +76,12 @@ bool DeterministicFiniteAutomata :: isFinalNode(const set<int>& node) {
 }
 
 bool DeterministicFiniteAutomata :: checkValidString(const string& numbers) {
-    set<int> currentNode = q0;
+    set<int> currentNode = initialState;
     for(char ch : numbers) {
         pair<set<int>, int> key;
         key.first = currentNode;
         key.second = stoi(string(1, ch));
-        if(d.count(key) == 0)
+        if(delta.count(key) == 0)
             return false;
         currentNode = calculateDelta(key);
     }

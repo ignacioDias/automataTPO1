@@ -34,4 +34,5 @@ add_executable(tpOb1
         TP/auxiliarmethods/AutomataOperations.h
         TP/testing/TestRename.h
         TP/testing/TestRename.cpp
+        TP/testing/TestUnion.cpp
 )

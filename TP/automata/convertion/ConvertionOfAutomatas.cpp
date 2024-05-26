@@ -107,7 +107,7 @@ set<set<int>> ConvertionOfAutomatas :: calculateFinal(const set<set<int>>& k) {
     set<set<int>> newF;
     for(const auto& currentSet : k) {
         for(auto currentNumber : currentSet) {
-            if(ndfa.getFinalSates().count(currentNumber) > 0) {
+            if(ndfa.getFinalStates().count(currentNumber) > 0) {
                 newF.insert(currentSet);
                 break;
             }

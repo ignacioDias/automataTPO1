@@ -441,6 +441,30 @@ TP/testing/TestRename.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestRename.cpp.s
 .PHONY : TP/testing/TestRename.cpp.s
 
+TP/testing/TestUnion.o: TP/testing/TestUnion.cpp.o
+.PHONY : TP/testing/TestUnion.o
+
+# target to build an object file
+TP/testing/TestUnion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestUnion.cpp.o
+.PHONY : TP/testing/TestUnion.cpp.o
+
+TP/testing/TestUnion.i: TP/testing/TestUnion.cpp.i
+.PHONY : TP/testing/TestUnion.i
+
+# target to preprocess a source file
+TP/testing/TestUnion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestUnion.cpp.i
+.PHONY : TP/testing/TestUnion.cpp.i
+
+TP/testing/TestUnion.s: TP/testing/TestUnion.cpp.s
+.PHONY : TP/testing/TestUnion.s
+
+# target to generate assembly for a file
+TP/testing/TestUnion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpOb1.dir/build.make CMakeFiles/tpOb1.dir/TP/testing/TestUnion.cpp.s
+.PHONY : TP/testing/TestUnion.cpp.s
+
 TP/testing/fileToNdfa.o: TP/testing/fileToNdfa.cpp.o
 .PHONY : TP/testing/fileToNdfa.o
 
@@ -609,6 +633,9 @@ help:
 	@echo "... TP/testing/TestRename.o"
 	@echo "... TP/testing/TestRename.i"
 	@echo "... TP/testing/TestRename.s"
+	@echo "... TP/testing/TestUnion.o"
+	@echo "... TP/testing/TestUnion.i"
+	@echo "... TP/testing/TestUnion.s"
 	@echo "... TP/testing/fileToNdfa.o"
 	@echo "... TP/testing/fileToNdfa.i"
 	@echo "... TP/testing/fileToNdfa.s"

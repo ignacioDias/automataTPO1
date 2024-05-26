@@ -1,18 +1,18 @@
 Se probará la entrada, salida y aceptación de cadenas con el siguiente 
 automata finito deterministico (AFND):
 
-A = < K, E, D, q0, F > 
+A = < states, alphabet, D, initialState, finalStates >
 donde: 
-    K = {3, 4}
-    E = {0, 1}
+    states = {3, 4}
+    alphabet = {0, 1}
     D = {
-        d(3,0) = 4
-        d(3,1) = 4
-        d(4,1) = 3
-        d(4,0) = 4
+        delta(3,0) = 4
+        delta(3,1) = 4
+        delta(4,1) = 3
+        delta(4,0) = 4
     }
-    q0 = 3
-    F = {4}
+    initialState = 3
+    finalStates = {4}
 El automata lee expresiones regulares de la forma (0|1)+0.
 Ejemplos de cadenas que acepta son: 
 - 0010

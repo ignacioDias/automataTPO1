@@ -148,6 +148,9 @@
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/TestRename.h">
 			<Option target="tpOb1"/>
 		</Unit>
+		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/TestUnion.cpp">
+			<Option target="tpOb1"/>
+		</Unit>
 		<Unit filename="/home/ignaciodias/Desktop/uni/automatas/automataTPO1/TP/testing/fileToNdfa.cpp">
 			<Option target="tpOb1"/>
 		</Unit>

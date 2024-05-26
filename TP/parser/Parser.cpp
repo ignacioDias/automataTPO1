@@ -48,7 +48,7 @@ bool Parser:: isRankdirLine(const string& line){
 }
 
 void Parser::addFinalStateFromFinalStateLine(const string& line){
-    regex regex("(\\d+)");
+    regex regex("(\\delta+)");
     smatch match;
     regex_search(line, match, regex);
     nda.addFinalState(stoi(match[1]));

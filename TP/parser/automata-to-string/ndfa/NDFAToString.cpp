@@ -14,8 +14,8 @@ string NDFAToString::ndfaToString(NotDeterministicFiniteAutomata ndfa) {
 }
 void NDFAToString::NDFATransitionsToString(NotDeterministicFiniteAutomata ndfa, string& ret) {
     const int LAMBDA = -1;
-    for(int number : ndfa.getSates()) {
-        for(int number2 : ndfa.getSates()) {
+    for(int number : ndfa.getStates()) {
+        for(int number2 : ndfa.getStates()) {
             set<int> label = ndfa.calculateWaysToGo(number,number2);
             if(!label.empty()) {
                 ret += to_string(number) + " -> " + to_string(number2) + " [label = \"";
@@ -31,7 +31,7 @@ void NDFAToString::NDFATransitionsToString(NotDeterministicFiniteAutomata ndfa, 
     }
 }
 void NDFAToString::toStringFinalStateNDFA(NotDeterministicFiniteAutomata ndfa, string& ret) {
-    for(int finalState : ndfa.getFinalSates())
+    for(int finalState : ndfa.getFinalStates())
         ret += to_string(finalState) + "[shape=doublecircle];\n";
     ret.pop_back();
 }

@@ -2,39 +2,49 @@
 #define LAMBDA (-1)
 
 
-NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2)
-{
-    NotDeterministicFiniteAutomata newAutomata = NotDeterministicFiniteAutomata();
-    
+NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2) {
+    NotDeterministicFiniteAutomata newAutomata;
     int counter = renameAutomata(&a1, 1);
     renameAutomata(&a2, counter);
-
     int newInitialState = 0;
     newAutomata.addState(newInitialState);
-    newAutomata.setInitialState(newInitialState); 
-    for(auto s: a1.getAlphabet()){
-        newAutomata.addSymbolToAlphabet(s); 
+    newAutomata.setInitialState(newInitialState);
+    for(auto s: a1.getAlphabet()) {
+        newAutomata.addSymbolToAlphabet(s);
     }
-    for(auto s: a2.getAlphabet()){
-        newAutomata.addSymbolToAlphabet(s); 
+    for(auto s: a2.getAlphabet()) {
+        newAutomata.addSymbolToAlphabet(s);
     }
-    newAutomata.addPath(newInitialState, LAMBDA, 1);
-    newAutomata.addPath(newInitialState,LAMBDA,a2.getInitialState());
-    for(auto state : a1.getSates())
+    newAutomata.addPath(newInitialState, LAMBDA, a1.getInitialState());
+    newAutomata.addPath(newInitialState, LAMBDA, a2.getInitialState());
+    for(auto state : a1.getStates()) {
         newAutomata.addState(state);
-    for(auto state : a2.getSates())
+    }
+    for(auto state : a2.getStates()) {
         newAutomata.addState(state);
-    for(int state: a1.getFinalSates()){
+    }
+    for(auto [from, destinations] : a1.getTransitions()) {
+        for(auto destination : destinations) {
+            newAutomata.addPath(from.first, from.second, destination);
+        }
+    }
+
+    for(auto [from, destinations] : a2.getTransitions()) {
+        for(auto destination : destinations) {
+                newAutomata.addPath(from.first, from.second, destination);
+            }
+    }
+    for(auto state : a1.getFinalStates()) {
         newAutomata.addFinalState(state);
     }
-    for(int state: a2.getFinalSates()){
+    for(auto state : a2.getFinalStates()) {
         newAutomata.addFinalState(state);
     }
     return newAutomata;
 }
 int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata *a1, int counter) {
-    for(auto node : a1->getSates()) {
-        if(CollectionsOperators::belongs(counter, a1->getSates())) {
+    for(auto node : a1->getStates()) {
+        if(CollectionsOperators::belongs(counter, a1->getStates())) {
             a1->changeValueState(counter, node);
         } else {
             a1->changeValueState(node, counter);
@@ -54,27 +64,38 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDetermini
     for(int s: a2.getAlphabet()){
         newAutomata.addSymbolToAlphabet(s); 
     }
-    for(int state: a1.getSates()){
+    for(int state: a1.getStates()){
         newAutomata.addState(state); 
     }
     renameAutomata(&a2, counter);
-    for(int state: a2.getSates()){
+    for(int state: a2.getStates()){
         newAutomata.addState(state); 
     }
-    for(int finalStateOfA1: a1.getFinalSates()){
+    for(int finalStateOfA1: a1.getFinalStates()){
         newAutomata.addPath(finalStateOfA1, LAMBDA, a2.getInitialState());
     }
-    newAutomata.setFinalState(a2.getFinalSates()); 
+    newAutomata.setFinalState(a2.getFinalStates());
+    for(auto [from, destinations] : a1.getTransitions()) {
+        for(auto destination : destinations) {
+            newAutomata.addPath(from.first, from.second, destination);
+        }
+    }
+
+    for(auto [from, destinations] : a2.getTransitions()) {
+        for(auto destination : destinations) {
+            newAutomata.addPath(from.first, from.second, destination);
+        }
+    }
     return newAutomata;
 }
 
-void AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata a1) {
+void AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata *a1) {
     NotDeterministicFiniteAutomata kleeneNDA = *new NotDeterministicFiniteAutomata();
-    int cant = renameAutomata(&a1, 1);
+    int cant = renameAutomata(a1, 1);
     int newQ0 = 0;
-    a1.addState(newQ0);
-    a1.addPath(newQ0, LAMBDA, a1.getInitialState());
-    a1.setInitialState(newQ0);
+    a1->addState(newQ0);
+    a1->addPath(newQ0, LAMBDA, a1->getInitialState());
+    a1->setInitialState(newQ0);
 }
 
 DeterministicFiniteAutomata AutomataOperations::minimization(DeterministicFiniteAutomata dfa) {

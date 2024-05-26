@@ -9,18 +9,18 @@ using namespace std;
 
 class NotDeterministicFiniteAutomata {
 private:
-    set<int> K;
-    set<int> E;
-    map<pair<int,int>, set<int>> d;
-    int q0;
-    set<int> F;
+    set<int> states;
+    set<int> alphabet;
+    map<pair<int,int>, set<int>> delta;
+    int initialState;
+    set<int> finalStates;
 
 public:
     NotDeterministicFiniteAutomata();
-    set<int> getSates();
+    set<int> getStates();
     set<int> getAlphabet();
     int getInitialState();
-    set<int> getFinalSates();
+    set<int> getFinalStates();
     void addState(int state);
     void addSymbolToAlphabet(int state);
     void setStates(set<int> states);
@@ -32,6 +32,6 @@ public:
     set<int> calculateDelta(pair<int,int> key);
     set<int> calculateWaysToGo(int from, int destination);
     void changeValueState(int oldValue, int newValue);
-
+    map<pair<int, int>, set<int>> getTransitions();
 };
 #endif //TPOB1_NOTDETERMINISTICFINITEAUTOMATA_H

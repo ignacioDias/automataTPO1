@@ -23,13 +23,12 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
     for(auto state : a2.getStates()) {
         newAutomata.addState(state);
     }
-    for(auto [from, destinations] : a1.getTransitions()) {
+    for(const auto& [from, destinations] : a1.getTransitions()) {
         for(auto destination : destinations) {
             newAutomata.addPath(from.first, from.second, destination);
         }
     }
-
-    for(auto [from, destinations] : a2.getTransitions()) {
+    for(const auto& [from, destinations] : a2.getTransitions()) {
         for(auto destination : destinations) {
                 newAutomata.addPath(from.first, from.second, destination);
             }
@@ -54,7 +53,6 @@ int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata *a1, int c
     return counter;
 }
 NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDeterministicFiniteAutomata a1, NotDeterministicFiniteAutomata a2) {
-
     int counter = renameAutomata(&a1, 0);
     NotDeterministicFiniteAutomata newAutomata = NotDeterministicFiniteAutomata();
     newAutomata.setInitialState(a1.getInitialState());
@@ -75,13 +73,12 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaConcatenation(NotDetermini
         newAutomata.addPath(finalStateOfA1, LAMBDA, a2.getInitialState());
     }
     newAutomata.setFinalState(a2.getFinalStates());
-    for(auto [from, destinations] : a1.getTransitions()) {
+    for(const auto& [from, destinations] : a1.getTransitions()) {
         for(auto destination : destinations) {
             newAutomata.addPath(from.first, from.second, destination);
         }
     }
-
-    for(auto [from, destinations] : a2.getTransitions()) {
+    for(const auto& [from, destinations] : a2.getTransitions()) {
         for(auto destination : destinations) {
             newAutomata.addPath(from.first, from.second, destination);
         }
@@ -97,7 +94,6 @@ void AutomataOperations::kleeneClosure(NotDeterministicFiniteAutomata *a1) {
     a1->addPath(newQ0, LAMBDA, a1->getInitialState());
     a1->setInitialState(newQ0);
 }
-
 DeterministicFiniteAutomata AutomataOperations::minimization(DeterministicFiniteAutomata dfa) {
     DeterministicFiniteAutomata minimizedAutomata = *new DeterministicFiniteAutomata();
     vector<set<set<int>>> states;

@@ -12,11 +12,11 @@ int main() {
     ndfa.addFinalState(1);
 
     NotDeterministicFiniteAutomata ndfa2 = *new NotDeterministicFiniteAutomata();
-    ndfa.setAlphabet({0,1});
-    ndfa.setStates({0,1});
-    ndfa.addPath(0, 1,1);
+    ndfa2.setAlphabet({0,1});
+    ndfa2.setStates({0,1});
+    ndfa2.addPath(0, 1,1);
 
-    NotDeterministicFiniteAutomata ndfaUnion = AutomataOperations::nfaConcatenation(ndfa, ndfa2);
+    NotDeterministicFiniteAutomata ndfaUnion = AutomataOperations::nfaUnion(ndfa, ndfa2);
     cout << NDFAToString::ndfaToString(ndfaUnion);
 
 }

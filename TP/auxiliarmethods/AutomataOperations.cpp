@@ -9,45 +9,37 @@ NotDeterministicFiniteAutomata AutomataOperations::nfaUnion(NotDeterministicFini
     int newInitialState = 0;
     newAutomata.addState(newInitialState);
     newAutomata.setInitialState(newInitialState);
-    for(auto s: a1.getAlphabet()) {
+    for(auto s: a1.getAlphabet())
         newAutomata.addSymbolToAlphabet(s);
-    }
-    for(auto s: a2.getAlphabet()) {
+    for(auto s: a2.getAlphabet())
         newAutomata.addSymbolToAlphabet(s);
-    }
     newAutomata.addPath(newInitialState, LAMBDA, a1.getInitialState());
     newAutomata.addPath(newInitialState, LAMBDA, a2.getInitialState());
-    for(auto state : a1.getStates()) {
+    for(auto state : a1.getStates())
         newAutomata.addState(state);
-    }
-    for(auto state : a2.getStates()) {
+    for(auto state : a2.getStates())
         newAutomata.addState(state);
-    }
     for(const auto& [from, destinations] : a1.getTransitions()) {
-        for(auto destination : destinations) {
+        for(auto destination : destinations)
             newAutomata.addPath(from.first, from.second, destination);
-        }
     }
     for(const auto& [from, destinations] : a2.getTransitions()) {
-        for(auto destination : destinations) {
+        for(auto destination : destinations)
                 newAutomata.addPath(from.first, from.second, destination);
-            }
     }
-    for(auto state : a1.getFinalStates()) {
+    for(auto state : a1.getFinalStates())
         newAutomata.addFinalState(state);
-    }
-    for(auto state : a2.getFinalStates()) {
+    for(auto state : a2.getFinalStates())
         newAutomata.addFinalState(state);
-    }
     return newAutomata;
 }
 int AutomataOperations::renameAutomata(NotDeterministicFiniteAutomata *a1, int counter) {
     for(auto node : a1->getStates()) {
         if(CollectionsOperators::belongs(counter, a1->getStates())) {
-            a1->changeValueState(counter, node);
-        } else {
+            a1->changeValueState(counter, node + 200); //solución horrible, no se me ocurrió una mejor, si el usuario pone 201 y 1, se rompe
+            a1->changeValueState(node + 200, counter);
+        } else
             a1->changeValueState(node, counter);
-        }
         counter++;
     }
     return counter;

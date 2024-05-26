@@ -56,9 +56,11 @@ set<set<int>> CollectionsOperators::difference(const set<set<int>>& set1, const 
     }
     return finalSet;
 }
-set<int> CollectionsOperators::getElem(const set<set<int>>& set) {
-    for(auto elem : set)
+set<int> CollectionsOperators::getElem(const set<set<int>>& set1) {
+    for(auto elem : set1)
         return elem;
+    set<int> finalSet;
+    return finalSet;
 }
 bool CollectionsOperators :: equalSets(const set<int>& set1, const set<int>& set2) {
     if(set1.size() != set2.size())

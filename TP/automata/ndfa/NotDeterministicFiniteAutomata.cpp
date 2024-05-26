@@ -46,7 +46,7 @@ void NotDeterministicFiniteAutomata ::addFinalState(int state) {
     this->finalStates.insert(state);
 }
 void NotDeterministicFiniteAutomata :: changeValueState(int oldValue, int newValue) {
-    if(!CollectionsOperators::belongs(newValue, states) && CollectionsOperators::belongs(oldValue, states)) {
+    if(CollectionsOperators::belongs(oldValue, states)) {
         if(oldValue == initialState)
             initialState = newValue;
         pair<int,int> pairToChange;
@@ -77,7 +77,7 @@ void NotDeterministicFiniteAutomata :: changeValueState(int oldValue, int newVal
             finalStates.erase(oldValue);
         }
     } else {
-        cout << "Nodo ya existente";
+        cout << "Nodo ya existente!!\n";
     }
 }
 
